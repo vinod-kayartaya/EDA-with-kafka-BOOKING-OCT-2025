@@ -1,5 +1,3 @@
-Here is a clean, step-by-step guide you can publish as a tutorial blog post. I kept it aligned with the artifacts you shared, including Java 17, Spring Boot 3.5.x, the Spring Web + Spring for Apache Kafka stack, and the same Kafka producer settings and port.
-
 # Build a Spring Boot Kafka Producer from scratch
 
 If you want a minimal, production-ready Kafka producer in Spring Boot, follow these steps. You will create a new project on start.spring.io, wire in the Kafka producer, and expose a REST endpoint that publishes messages to a Kafka topic.
