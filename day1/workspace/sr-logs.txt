@@ -1,0 +1,353 @@
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:31:36,621] INFO AdminClientConfig values: 
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+schema-registry  | 	metadata.max.age.ms = 300000
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:31:36,933] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:31:36,934] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:31:36,934] INFO Kafka startTimeMs: 1761611496925 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:31:37,010] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,016] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,126] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,126] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,228] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,228] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,431] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,432] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,937] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:37,937] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:38,746] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:38,746] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:39,658] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:31:39,658] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:31:42,181] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:31:42,278] INFO Logging initialized @809ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:31:42,325] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:31:42,524] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:31:42,524] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:31:42,851] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:31:42,852] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:31:42,983] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:31:42,984] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)

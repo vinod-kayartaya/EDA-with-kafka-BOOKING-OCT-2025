@@ -1,0 +1,2374 @@
+kafka-ui  | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+kafka-ui  |  _   _ ___    __             _                _          _  __      __ _
+kafka-ui  | | | | |_ _|  / _|___ _ _    /_\  _ __ __ _ __| |_  ___  | |/ /__ _ / _| |_____
+kafka-ui  | | |_| || |  |  _/ _ | '_|  / _ \| '_ / _` / _| ' \/ -_) | ' </ _` |  _| / / _`|
+kafka-ui  |  \___/|___| |_| \___|_|   /_/ \_| .__\__,_\__|_||_\___| |_|\_\__,_|_| |_\_\__,|
+kafka-ui  |                                  |_|                                             
+kafka-ui  | 
+kafka-ui  | [30m2025-10-28 00:27:34,217[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mc.p.k.u.KafkaUiApplication[0;39m: Starting KafkaUiApplication using Java 17.0.6 with PID 1 (/kafka-ui-api.jar started by kafkaui in /)
+kafka-ui  | [30m2025-10-28 00:27:34,223[0;39m [39mDEBUG[0;39m [[34mmain[0;39m] [33mc.p.k.u.KafkaUiApplication[0;39m: Running with Spring Boot v3.1.3, Spring v6.0.11
+kafka-ui  | [30m2025-10-28 00:27:34,225[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mc.p.k.u.KafkaUiApplication[0;39m: No active profile set, falling back to 1 default profile: "default"
+kafka-ui  | [30m2025-10-28 00:27:41,340[0;39m [39mDEBUG[0;39m [[34mmain[0;39m] [33mc.p.k.u.s.SerdesInitializer[0;39m: Configuring serdes for cluster local
+kafka-ui  | [30m2025-10-28 00:27:42,854[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mo.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration[0;39m: 
+kafka-ui  | 
+kafka-ui  | Using generated security password: 056bbe69-3c4a-48dd-89e1-d72bf93c145b
+kafka-ui  | 
+kafka-ui  | [30m2025-10-28 00:27:43,275[0;39m [31mWARN [0;39m [[34mmain[0;39m] [33mc.p.k.u.c.a.DisabledAuthSecurityConfig[0;39m: Authentication is disabled. Access will be unrestricted.
+kafka-ui  | [30m2025-10-28 00:27:43,719[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mo.s.b.a.e.w.EndpointLinksResolver[0;39m: Exposing 3 endpoint(s) beneath base path '/actuator'
+kafka-ui  | [30m2025-10-28 00:27:45,052[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mo.s.b.w.e.n.NettyWebServer[0;39m: Netty started on port 8080
+kafka-ui  | [30m2025-10-28 00:27:45,111[0;39m [34mINFO [0;39m [[34mmain[0;39m] [33mc.p.k.u.KafkaUiApplication[0;39m: Started KafkaUiApplication in 12.663 seconds (process running for 14.529)
+kafka-ui  | [30m2025-10-28 00:27:46,666[0;39m [39mDEBUG[0;39m [[34mparallel-2[0;39m] [33mc.p.k.u.s.ClustersStatisticsScheduler[0;39m: Start getting metrics for kafkaCluster: local
+kafka-ui  | [30m2025-10-28 00:27:46,687[0;39m [34mINFO [0;39m [[34mparallel-2[0;39m] [33mo.a.k.c.a.AdminClientConfig[0;39m: AdminClientConfig values: 
+kafka-ui  | 	auto.include.jmx.reporter = true
+kafka-ui  | 	bootstrap.servers = [kafka:29092]
+kafka-ui  | 	client.dns.lookup = use_all_dns_ips
+kafka-ui  | 	client.id = kafka-ui-admin-1761611266-1
+kafka-ui  | 	connections.max.idle.ms = 300000
+kafka-ui  | 	default.api.timeout.ms = 60000
+kafka-ui  | 	metadata.max.age.ms = 300000
+kafka-ui  | 	metric.reporters = []
+kafka-ui  | 	metrics.num.samples = 2
+kafka-ui  | 	metrics.recording.level = INFO
+kafka-ui  | 	metrics.sample.window.ms = 30000
+kafka-ui  | 	receive.buffer.bytes = 65536
+kafka-ui  | 	reconnect.backoff.max.ms = 1000
+kafka-ui  | 	reconnect.backoff.ms = 50
+kafka-ui  | 	request.timeout.ms = 30000
+kafka-ui  | 	retries = 2147483647
+kafka-ui  | 	retry.backoff.ms = 100
+kafka-ui  | 	sasl.client.callback.handler.class = null
+kafka-ui  | 	sasl.jaas.config = null
+kafka-ui  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+kafka-ui  | 	sasl.kerberos.min.time.before.relogin = 60000
+kafka-ui  | 	sasl.kerberos.service.name = null
+kafka-ui  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+kafka-ui  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+kafka-ui  | 	sasl.login.callback.handler.class = null
+kafka-ui  | 	sasl.login.class = null
+kafka-ui  | 	sasl.login.connect.timeout.ms = null
+kafka-ui  | 	sasl.login.read.timeout.ms = null
+kafka-ui  | 	sasl.login.refresh.buffer.seconds = 300
+kafka-ui  | 	sasl.login.refresh.min.period.seconds = 60
+kafka-ui  | 	sasl.login.refresh.window.factor = 0.8
+kafka-ui  | 	sasl.login.refresh.window.jitter = 0.05
+kafka-ui  | 	sasl.login.retry.backoff.max.ms = 10000
+kafka-ui  | 	sasl.login.retry.backoff.ms = 100
+kafka-ui  | 	sasl.mechanism = GSSAPI
+kafka-ui  | 	sasl.oauthbearer.clock.skew.seconds = 30
+kafka-ui  | 	sasl.oauthbearer.expected.audience = null
+kafka-ui  | 	sasl.oauthbearer.expected.issuer = null
+kafka-ui  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+kafka-ui  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+kafka-ui  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+kafka-ui  | 	sasl.oauthbearer.jwks.endpoint.url = null
+kafka-ui  | 	sasl.oauthbearer.scope.claim.name = scope
+kafka-ui  | 	sasl.oauthbearer.sub.claim.name = sub
+kafka-ui  | 	sasl.oauthbearer.token.endpoint.url = null
+kafka-ui  | 	security.protocol = PLAINTEXT
+kafka-ui  | 	security.providers = null
+kafka-ui  | 	send.buffer.bytes = 131072
+kafka-ui  | 	socket.connection.setup.timeout.max.ms = 30000
+kafka-ui  | 	socket.connection.setup.timeout.ms = 10000
+kafka-ui  | 	ssl.cipher.suites = null
+kafka-ui  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+kafka-ui  | 	ssl.endpoint.identification.algorithm = https
+kafka-ui  | 	ssl.engine.factory.class = null
+kafka-ui  | 	ssl.key.password = null
+kafka-ui  | 	ssl.keymanager.algorithm = SunX509
+kafka-ui  | 	ssl.keystore.certificate.chain = null
+kafka-ui  | 	ssl.keystore.key = null
+kafka-ui  | 	ssl.keystore.location = null
+kafka-ui  | 	ssl.keystore.password = null
+kafka-ui  | 	ssl.keystore.type = JKS
+kafka-ui  | 	ssl.protocol = TLSv1.3
+kafka-ui  | 	ssl.provider = null
+kafka-ui  | 	ssl.secure.random.implementation = null
+kafka-ui  | 	ssl.trustmanager.algorithm = PKIX
+kafka-ui  | 	ssl.truststore.certificates = null
+kafka-ui  | 	ssl.truststore.location = null
+kafka-ui  | 	ssl.truststore.password = null
+kafka-ui  | 	ssl.truststore.type = JKS
+kafka-ui  | 
+kafka-ui  | [30m2025-10-28 00:27:46,815[0;39m [34mINFO [0;39m [[34mparallel-2[0;39m] [33mo.a.k.c.u.AppInfoParser[0;39m: Kafka version: 3.5.0
+kafka-ui  | [30m2025-10-28 00:27:46,815[0;39m [34mINFO [0;39m [[34mparallel-2[0;39m] [33mo.a.k.c.u.AppInfoParser[0;39m: Kafka commitId: c97b88d5db4de28d
+kafka-ui  | [30m2025-10-28 00:27:46,815[0;39m [34mINFO [0;39m [[34mparallel-2[0;39m] [33mo.a.k.c.u.AppInfoParser[0;39m: Kafka startTimeMs: 1761611266812
+kafka-ui  | [30m2025-10-28 00:27:47,658[0;39m [39mDEBUG[0;39m [[34mparallel-3[0;39m] [33mc.p.k.u.s.ClustersStatisticsScheduler[0;39m: Metrics updated for cluster: local
+kafka     | ===> User
+kafka     | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+kafka     | ===> Configuring ...
+kafka     | Running in Zookeeper mode...
+kafka     | ===> Running preflight checks ... 
+kafka     | ===> Check if /var/lib/kafka/data is writable ...
+kafka     | ===> Check if Zookeeper is healthy ...
+kafka      | SLF4J: Class path contains multiple SLF4J bindings.
+kafka      | SLF4J: Found binding in [jar:file:/usr/share/java/kafka/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+kafka      | SLF4J: Found binding in [jar:file:/usr/share/java/cp-base-new/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+zookeeper  | ===> User
+zookeeper  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+kafka      | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+kafka      | SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+kafka      | [2025-10-28 00:27:36,634] INFO Client environment:zookeeper.version=3.8.3-6ad6d364c7c0bcf0de452d54ebefa3058098ab56, built on 2023-10-05 10:34 UTC (org.apache.zookeeper.ZooKeeper)
+zookeeper  | ===> Configuring ...
+zookeeper  | ===> Running preflight checks ... 
+zookeeper  | ===> Check if /var/lib/zookeeper/data is writable ...
+kafka      | [2025-10-28 00:27:36,635] INFO Client environment:host.name=1a4a8870d8cc (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,635] INFO Client environment:java.version=11.0.21 (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,635] INFO Client environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,635] INFO Client environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.ZooKeeper)
+zookeeper  | ===> Check if /var/lib/zookeeper/log is writable ...
+zookeeper  | ===> Launching ... 
+kafka      | [2025-10-28 00:27:36,635] INFO Client environment:java.class.path=/usr/share/java/kafka/jetty-server-9.4.53.v20231009.jar:/usr/share/java/kafka/jopt-simple-5.0.4.jar:/usr/share/java/kafka/trogdor-7.6.0-ccs.jar:/usr/share/java/kafka/jackson-annotations-2.13.5.jar:/usr/share/java/kafka/audience-annotations-0.12.0.jar:/usr/share/java/kafka/javax.activation-api-1.2.0.jar:/usr/share/java/kafka/commons-lang3-3.8.1.jar:/usr/share/java/kafka/jersey-container-servlet-core-2.39.1.jar:/usr/share/java/kafka/slf4j-api-1.7.36.jar:/usr/share/java/kafka/connect-transforms-7.6.0-ccs.jar:/usr/share/java/kafka/kafka-streams-scala_2.13-7.6.0-ccs.jar:/usr/share/java/kafka/snappy-java-1.1.10.5.jar:/usr/share/java/kafka/jetty-io-9.4.53.v20231009.jar:/usr/share/java/kafka/jakarta.validation-api-2.0.2.jar:/usr/share/java/kafka/jersey-server-2.39.1.jar:/usr/share/java/kafka/scala-reflect-2.13.11.jar:/usr/share/java/kafka/jackson-module-scala_2.13-2.13.5.jar:/usr/share/java/kafka/caffeine-2.9.3.jar:/usr/share/java/kafka/paranamer-2.8.jar:/usr/share/java/kafka/netty-codec-4.1.100.Final.jar:/usr/share/java/kafka/metrics-core-4.1.12.1.jar:/usr/share/java/kafka/kafka-server-common-7.6.0-ccs.jar:/usr/share/java/kafka/kafka-group-coordinator-7.6.0-ccs.jar:/usr/share/java/kafka/netty-transport-native-epoll-4.1.100.Final.jar:/usr/share/java/kafka/scala-logging_2.13-3.9.4.jar:/usr/share/java/kafka/jersey-client-2.39.1.jar:/usr/share/java/kafka/kafka-log4j-appender-7.6.0-ccs.jar:/usr/share/java/kafka/kafka-raft-7.6.0-ccs.jar:/usr/share/java/kafka/connect-basic-auth-extension-7.6.0-ccs.jar:/usr/share/java/kafka/javax.ws.rs-api-2.1.1.jar:/usr/share/java/kafka/connect-mirror-client-7.6.0-ccs.jar:/usr/share/java/kafka/plexus-utils-3.3.1.jar:/usr/share/java/kafka/javassist-3.29.2-GA.jar:/usr/share/java/kafka/commons-validator-1.7.jar:/usr/share/java/kafka/jetty-continuation-9.4.53.v20231009.jar:/usr/share/java/kafka/netty-buffer-4.1.100.Final.jar:/usr/share/java/kafka/scala-library-2.13.11.jar:/usr/share/java/kafka/commons-beanutils-1.9.4.jar:/usr/share/java/kafka/kafka-tools-api-7.6.0-ccs.jar:/usr/share/java/kafka/hk2-api-2.6.1.jar:/usr/share/java/kafka/javax.servlet-api-3.1.0.jar:/usr/share/java/kafka/commons-digester-2.1.jar:/usr/share/java/kafka/jose4j-0.9.3.jar:/usr/share/java/kafka/netty-transport-classes-epoll-4.1.100.Final.jar:/usr/share/java/kafka/netty-common-4.1.100.Final.jar:/usr/share/java/kafka/jakarta.xml.bind-api-2.3.3.jar:/usr/share/java/kafka/netty-transport-4.1.100.Final.jar:/usr/share/java/kafka/jetty-http-9.4.53.v20231009.jar:/usr/share/java/kafka/jersey-common-2.39.1.jar:/usr/share/java/kafka/jaxb-api-2.3.1.jar:/usr/share/java/kafka/commons-cli-1.4.jar:/usr/share/java/kafka/zookeeper-jute-3.8.3.jar:/usr/share/java/kafka/reload4j-1.2.25.jar:/usr/share/java/kafka/kafka-clients-7.6.0-ccs.jar:/usr/share/java/kafka/jakarta.ws.rs-api-2.1.6.jar:/usr/share/java/kafka/hk2-locator-2.6.1.jar:/usr/share/java/kafka/aopalliance-repackaged-2.6.1.jar:/usr/share/java/kafka/kafka-streams-examples-7.6.0-ccs.jar:/usr/share/java/kafka/connect-runtime-7.6.0-ccs.jar:/usr/share/java/kafka/maven-artifact-3.8.8.jar:/usr/share/java/kafka/rocksdbjni-7.9.2.jar:/usr/share/java/kafka/argparse4j-0.7.0.jar:/usr/share/java/kafka/jetty-security-9.4.53.v20231009.jar:/usr/share/java/kafka/zstd-jni-1.5.5-1.jar:/usr/share/java/kafka/jersey-container-servlet-2.39.1.jar:/usr/share/java/kafka/jetty-client-9.4.53.v20231009.jar:/usr/share/java/kafka/jackson-jaxrs-json-provider-2.13.5.jar:/usr/share/java/kafka/connect-json-7.6.0-ccs.jar:/usr/share/java/kafka/jackson-databind-2.13.5.jar:/usr/share/java/kafka/kafka_2.13-7.6.0-ccs.jar:/usr/share/java/kafka/kafka-storage-api-7.6.0-ccs.jar:/usr/share/java/kafka/commons-io-2.11.0.jar:/usr/share/java/kafka/kafka-tools-7.6.0-ccs.jar:/usr/share/java/kafka/netty-resolver-4.1.100.Final.jar:/usr/share/java/kafka/reflections-0.10.2.jar:/usr/share/java/kafka/netty-handler-4.1.100.Final.jar:/usr/share/java/kafka/kafka-storage-7.6.0-ccs.jar:/usr/share/java/kafka/jakarta.activation-api-1.2.2.jar:/usr/share/java/kafka/jackson-jaxrs-base-2.13.5.jar:/usr/share/java/kafka/jsr305-3.0.2.jar:/usr/share/java/kafka/jetty-util-ajax-9.4.53.v20231009.jar:/usr/share/java/kafka/commons-logging-1.2.jar:/usr/share/java/kafka/netty-transport-native-unix-common-4.1.100.Final.jar:/usr/share/java/kafka/kafka.jar:/usr/share/java/kafka/osgi-resource-locator-1.0.3.jar:/usr/share/java/kafka/swagger-annotations-2.2.8.jar:/usr/share/java/kafka/jetty-util-9.4.53.v20231009.jar:/usr/share/java/kafka/jackson-core-2.13.5.jar:/usr/share/java/kafka/hk2-utils-2.6.1.jar:/usr/share/java/kafka/kafka-metadata-7.6.0-ccs.jar:/usr/share/java/kafka/jackson-module-jaxb-annotations-2.13.5.jar:/usr/share/java/kafka/kafka-streams-7.6.0-ccs.jar:/usr/share/java/kafka/error_prone_annotations-2.10.0.jar:/usr/share/java/kafka/jersey-hk2-2.39.1.jar:/usr/share/java/kafka/lz4-java-1.8.0.jar:/usr/share/java/kafka/commons-collections-3.2.2.jar:/usr/share/java/kafka/kafka-shell-7.6.0-ccs.jar:/usr/share/java/kafka/slf4j-reload4j-1.7.36.jar:/usr/share/java/kafka/checker-qual-3.19.0.jar:/usr/share/java/kafka/jline-3.22.0.jar:/usr/share/java/kafka/scala-collection-compat_2.13-2.10.0.jar:/usr/share/java/kafka/connect-api-7.6.0-ccs.jar:/usr/share/java/kafka/connect-mirror-7.6.0-ccs.jar:/usr/share/java/kafka/jakarta.inject-2.6.1.jar:/usr/share/java/kafka/jakarta.annotation-api-1.3.5.jar:/usr/share/java/kafka/javax.annotation-api-1.3.2.jar:/usr/share/java/kafka/activation-1.1.1.jar:/usr/share/java/kafka/jackson-datatype-jdk8-2.13.5.jar:/usr/share/java/kafka/zookeeper-3.8.3.jar:/usr/share/java/kafka/kafka-streams-test-utils-7.6.0-ccs.jar:/usr/share/java/kafka/scala-java8-compat_2.13-1.0.2.jar:/usr/share/java/kafka/jetty-servlets-9.4.53.v20231009.jar:/usr/share/java/kafka/jetty-servlet-9.4.53.v20231009.jar:/usr/share/java/kafka/metrics-core-2.2.0.jar:/usr/share/java/kafka/jackson-dataformat-csv-2.13.5.jar:/usr/share/java/kafka/pcollections-4.0.1.jar:/usr/share/java/cp-base-new/jopt-simple-5.0.4.jar:/usr/share/java/cp-base-new/disk-usage-agent-7.6.0.jar:/usr/share/java/cp-base-new/audience-annotations-0.12.0.jar:/usr/share/java/cp-base-new/slf4j-api-1.7.36.jar:/usr/share/java/cp-base-new/snappy-java-1.1.10.5.jar:/usr/share/java/cp-base-new/gson-2.9.0.jar:/usr/share/java/cp-base-new/caffeine-2.9.3.jar:/usr/share/java/cp-base-new/paranamer-2.8.jar:/usr/share/java/cp-base-new/re2j-1.6.jar:/usr/share/java/cp-base-new/metrics-core-4.1.12.1.jar:/usr/share/java/cp-base-new/kafka-server-common-7.6.0-ccs.jar:/usr/share/java/cp-base-new/kafka-group-coordinator-7.6.0-ccs.jar:/usr/share/java/cp-base-new/jackson-dataformat-csv-2.14.2.jar:/usr/share/java/cp-base-new/scala-logging_2.13-3.9.4.jar:/usr/share/java/cp-base-new/jackson-datatype-jdk8-2.14.2.jar:/usr/share/java/cp-base-new/kafka-raft-7.6.0-ccs.jar:/usr/share/java/cp-base-new/jackson-core-2.14.2.jar:/usr/share/java/cp-base-new/commons-validator-1.7.jar:/usr/share/java/cp-base-new/common-utils-7.6.0.jar:/usr/share/java/cp-base-new/commons-beanutils-1.9.4.jar:/usr/share/java/cp-base-new/kafka-tools-api-7.6.0-ccs.jar:/usr/share/java/cp-base-new/commons-digester-2.1.jar:/usr/share/java/cp-base-new/jose4j-0.9.3.jar:/usr/share/java/cp-base-new/jolokia-jvm-1.7.1.jar:/usr/share/java/cp-base-new/commons-cli-1.4.jar:/usr/share/java/cp-base-new/zookeeper-jute-3.8.3.jar:/usr/share/java/cp-base-new/reload4j-1.2.25.jar:/usr/share/java/cp-base-new/kafka-clients-7.6.0-ccs.jar:/usr/share/java/cp-base-new/jmx_prometheus_javaagent-0.18.0.jar:/usr/share/java/cp-base-new/argparse4j-0.7.0.jar:/usr/share/java/cp-base-new/zstd-jni-1.5.5-1.jar:/usr/share/java/cp-base-new/scala-library-2.13.10.jar:/usr/share/java/cp-base-new/jackson-module-scala_2.13-2.14.2.jar:/usr/share/java/cp-base-new/jolokia-core-1.7.1.jar:/usr/share/java/cp-base-new/jackson-annotations-2.14.2.jar:/usr/share/java/cp-base-new/kafka_2.13-7.6.0-ccs.jar:/usr/share/java/cp-base-new/kafka-storage-api-7.6.0-ccs.jar:/usr/share/java/cp-base-new/commons-io-2.11.0.jar:/usr/share/java/cp-base-new/kafka-storage-7.6.0-ccs.jar:/usr/share/java/cp-base-new/logredactor-1.0.12.jar:/usr/share/java/cp-base-new/commons-logging-1.2.jar:/usr/share/java/cp-base-new/utility-belt-7.6.0.jar:/usr/share/java/cp-base-new/snakeyaml-2.0.jar:/usr/share/java/cp-base-new/logredactor-metrics-1.0.12.jar:/usr/share/java/cp-base-new/minimal-json-0.9.5.jar:/usr/share/java/cp-base-new/json-simple-1.1.1.jar:/usr/share/java/cp-base-new/kafka-metadata-7.6.0-ccs.jar:/usr/share/java/cp-base-new/error_prone_annotations-2.10.0.jar:/usr/share/java/cp-base-new/jackson-dataformat-yaml-2.14.2.jar:/usr/share/java/cp-base-new/lz4-java-1.8.0.jar:/usr/share/java/cp-base-new/commons-collections-3.2.2.jar:/usr/share/java/cp-base-new/slf4j-reload4j-1.7.36.jar:/usr/share/java/cp-base-new/checker-qual-3.19.0.jar:/usr/share/java/cp-base-new/scala-collection-compat_2.13-2.10.0.jar:/usr/share/java/cp-base-new/jackson-databind-2.14.2.jar:/usr/share/java/cp-base-new/scala-reflect-2.13.10.jar:/usr/share/java/cp-base-new/zookeeper-3.8.3.jar:/usr/share/java/cp-base-new/scala-java8-compat_2.13-1.0.2.jar:/usr/share/java/cp-base-new/metrics-core-2.2.0.jar:/usr/share/java/cp-base-new/pcollections-4.0.1.jar (org.apache.zookeeper.ZooKeeper)
+zookeeper  | ===> Launching zookeeper ... 
+zookeeper  | [2025-10-28 00:27:36,079] INFO Reading configuration from: /etc/kafka/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,101] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,101] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,101] INFO observerMasterPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+zookeeper  | [2025-10-28 00:27:36,101] INFO metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,106] INFO autopurge.snapRetainCount set to 3 (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper  | [2025-10-28 00:27:36,106] INFO autopurge.purgeInterval set to 0 (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper  | [2025-10-28 00:27:36,106] INFO Purge task is not scheduled. (org.apache.zookeeper.server.DatadirCleanupManager)
+zookeeper  | [2025-10-28 00:27:36,106] WARN Either no config or no quorum defined in config, running in standalone mode (org.apache.zookeeper.server.quorum.QuorumPeerMain)
+zookeeper  | [2025-10-28 00:27:36,108] INFO Log4j 1.2 jmx support not found; jmx disabled. (org.apache.zookeeper.jmx.ManagedUtil)
+zookeeper  | [2025-10-28 00:27:36,109] INFO Reading configuration from: /etc/kafka/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,109] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,109] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,109] INFO observerMasterPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,109] INFO metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+zookeeper  | [2025-10-28 00:27:36,109] INFO Starting server (org.apache.zookeeper.server.ZooKeeperServerMain)
+zookeeper  | [2025-10-28 00:27:36,123] INFO ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@770d3326 (org.apache.zookeeper.server.ServerMetrics)
+zookeeper  | [2025-10-28 00:27:36,126] INFO ACL digest algorithm is: SHA1 (org.apache.zookeeper.server.auth.DigestAuthenticationProvider)
+zookeeper  | [2025-10-28 00:27:36,126] INFO zookeeper.DigestAuthenticationProvider.enabled = true (org.apache.zookeeper.server.auth.DigestAuthenticationProvider)
+zookeeper  | [2025-10-28 00:27:36,129] INFO zookeeper.snapshot.trust.empty : false (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper  | [2025-10-28 00:27:36,140] INFO  (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO   ______                  _                                           (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO  |___  /                 | |                                          (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __    (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__| (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |     (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_| (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.version=6.10.14-linuxkit (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:user.name=appuser (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:user.home=/home/appuser (org.apache.zookeeper.ZooKeeper)
+zookeeper  | [2025-10-28 00:27:36,140] INFO                                               | |                      (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO                                               |_|                      (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,140] INFO  (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:zookeeper.version=3.8.3-6ad6d364c7c0bcf0de452d54ebefa3058098ab56, built on 2023-10-05 10:34 UTC (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:host.name=7f978ab59ff5 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.version=11.0.21 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:user.dir=/home/appuser (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.memory.free=109MB (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.memory.max=1986MB (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,636] INFO Client environment:os.memory.total=126MB (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,641] INFO Initiating client connection, connectString=zookeeper:2181 sessionTimeout=40000 watcher=io.confluent.admin.utils.ZookeeperConnectionWatcher@184cf7cf (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,651] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+kafka      | [2025-10-28 00:27:36,661] INFO jute.maxbuffer value is 1048575 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+kafka      | [2025-10-28 00:27:36,680] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | [2025-10-28 00:27:36,700] INFO Opening socket connection to server zookeeper/172.19.0.2:2181. (org.apache.zookeeper.ClientCnxn)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.class.path=/usr/bin/../share/java/kafka/jetty-server-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jopt-simple-5.0.4.jar:/usr/bin/../share/java/kafka/trogdor-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/audience-annotations-0.12.0.jar:/usr/bin/../share/java/kafka/javax.activation-api-1.2.0.jar:/usr/bin/../share/java/kafka/commons-lang3-3.8.1.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-core-2.39.1.jar:/usr/bin/../share/java/kafka/slf4j-api-1.7.36.jar:/usr/bin/../share/java/kafka/connect-transforms-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-streams-scala_2.13-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/snappy-java-1.1.10.5.jar:/usr/bin/../share/java/kafka/jetty-io-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jakarta.validation-api-2.0.2.jar:/usr/bin/../share/java/kafka/jersey-server-2.39.1.jar:/usr/bin/../share/java/kafka/scala-reflect-2.13.11.jar:/usr/bin/../share/java/kafka/jackson-module-scala_2.13-2.13.5.jar:/usr/bin/../share/java/kafka/caffeine-2.9.3.jar:/usr/bin/../share/java/kafka/paranamer-2.8.jar:/usr/bin/../share/java/kafka/netty-codec-4.1.100.Final.jar:/usr/bin/../share/java/kafka/metrics-core-4.1.12.1.jar:/usr/bin/../share/java/kafka/kafka-server-common-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-group-coordinator-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-epoll-4.1.100.Final.jar:/usr/bin/../share/java/kafka/scala-logging_2.13-3.9.4.jar:/usr/bin/../share/java/kafka/jersey-client-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-log4j-appender-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-raft-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-basic-auth-extension-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/javax.ws.rs-api-2.1.1.jar:/usr/bin/../share/java/kafka/connect-mirror-client-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/plexus-utils-3.3.1.jar:/usr/bin/../share/java/kafka/javassist-3.29.2-GA.jar:/usr/bin/../share/java/kafka/commons-validator-1.7.jar:/usr/bin/../share/java/kafka/jetty-continuation-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/netty-buffer-4.1.100.Final.jar:/usr/bin/../share/java/kafka/scala-library-2.13.11.jar:/usr/bin/../share/java/kafka/commons-beanutils-1.9.4.jar:/usr/bin/../share/java/kafka/kafka-tools-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/hk2-api-2.6.1.jar:/usr/bin/../share/java/kafka/javax.servlet-api-3.1.0.jar:/usr/bin/../share/java/kafka/commons-digester-2.1.jar:/usr/bin/../share/java/kafka/jose4j-0.9.3.jar:/usr/bin/../share/java/kafka/netty-transport-classes-epoll-4.1.100.Final.jar:/usr/bin/../share/java/kafka/netty-common-4.1.100.Final.jar:/usr/bin/../share/java/kafka/jakarta.xml.bind-api-2.3.3.jar:/usr/bin/../share/java/kafka/netty-transport-4.1.100.Final.jar:/usr/bin/../share/java/kafka/jetty-http-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jersey-common-2.39.1.jar:/usr/bin/../share/java/kafka/jaxb-api-2.3.1.jar:/usr/bin/../share/java/kafka/commons-cli-1.4.jar:/usr/bin/../share/java/kafka/zookeeper-jute-3.8.3.jar:/usr/bin/../share/java/kafka/reload4j-1.2.25.jar:/usr/bin/../share/java/kafka/kafka-clients-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.ws.rs-api-2.1.6.jar:/usr/bin/../share/java/kafka/hk2-locator-2.6.1.jar:/usr/bin/../share/java/kafka/aopalliance-repackaged-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-streams-examples-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-runtime-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/maven-artifact-3.8.8.jar:/usr/bin/../share/java/kafka/rocksdbjni-7.9.2.jar:/usr/bin/../share/java/kafka/argparse4j-0.7.0.jar:/usr/bin/../share/java/kafka/jetty-security-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/zstd-jni-1.5.5-1.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-2.39.1.jar:/usr/bin/../share/java/kafka/jetty-client-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-json-provider-2.13.5.jar:/usr/bin/../share/java/kafka/connect-json-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-databind-2.13.5.jar:/usr/bin/../share/java/kafka/kafka_2.13-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/commons-io-2.11.0.jar:/usr/bin/../share/java/kafka/kafka-tools-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/netty-resolver-4.1.100.Final.jar:/usr/bin/../share/java/kafka/reflections-0.10.2.jar:/usr/bin/../share/java/kafka/netty-handler-4.1.100.Final.jar:/usr/bin/../share/java/kafka/kafka-storage-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.activation-api-1.2.2.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-base-2.13.5.jar:/usr/bin/../share/java/kafka/jsr305-3.0.2.jar:/usr/bin/../share/java/kafka/jetty-util-ajax-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/commons-logging-1.2.jar:/usr/bin/../share/java/kafka/netty-transport-native-unix-common-4.1.100.Final.jar:/usr/bin/../share/java/kafka/kafka.jar:/usr/bin/../share/java/kafka/osgi-resource-locator-1.0.3.jar:/usr/bin/../share/java/kafka/swagger-annotations-2.2.8.jar:/usr/bin/../share/java/kafka/jetty-util-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jackson-core-2.13.5.jar:/usr/bin/../share/java/kafka/hk2-utils-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-metadata-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-module-jaxb-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/kafka-streams-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/error_prone_annotations-2.10.0.jar:/usr/bin/../share/java/kafka/jersey-hk2-2.39.1.jar:/usr/bin/../share/java/kafka/lz4-java-1.8.0.jar:/usr/bin/../share/java/kafka/commons-collections-3.2.2.jar:/usr/bin/../share/java/kafka/kafka-shell-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/slf4j-reload4j-1.7.36.jar:/usr/bin/../share/java/kafka/checker-qual-3.19.0.jar:/usr/bin/../share/java/kafka/jline-3.22.0.jar:/usr/bin/../share/java/kafka/scala-collection-compat_2.13-2.10.0.jar:/usr/bin/../share/java/kafka/connect-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-mirror-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.inject-2.6.1.jar:/usr/bin/../share/java/kafka/jakarta.annotation-api-1.3.5.jar:/usr/bin/../share/java/kafka/javax.annotation-api-1.3.2.jar:/usr/bin/../share/java/kafka/activation-1.1.1.jar:/usr/bin/../share/java/kafka/jackson-datatype-jdk8-2.13.5.jar:/usr/bin/../share/java/kafka/zookeeper-3.8.3.jar:/usr/bin/../share/java/kafka/kafka-streams-test-utils-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/scala-java8-compat_2.13-1.0.2.jar:/usr/bin/../share/java/kafka/jetty-servlets-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jetty-servlet-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/metrics-core-2.2.0.jar:/usr/bin/../share/java/kafka/jackson-dataformat-csv-2.13.5.jar:/usr/bin/../share/java/kafka/pcollections-4.0.1.jar:/usr/bin/../share/java/confluent-telemetry/* (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.io.tmpdir=/tmp (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:java.compiler=<NA> (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.name=Linux (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.arch=amd64 (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | [2025-10-28 00:27:36,702] INFO SASL config status: Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+kafka      | [2025-10-28 00:27:36,719] INFO Socket connection established, initiating session, client: /172.19.0.3:50412, server: zookeeper/172.19.0.2:2181 (org.apache.zookeeper.ClientCnxn)
+kafka      | [2025-10-28 00:27:36,762] INFO Session establishment complete on server zookeeper/172.19.0.2:2181, session id = 0x10002b862e50000, negotiated timeout = 40000 (org.apache.zookeeper.ClientCnxn)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.version=6.10.14-linuxkit (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:user.name=appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:user.home=/home/appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:user.dir=/home/appuser (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.memory.free=490MB (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.memory.max=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO Server environment:os.memory.total=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | [2025-10-28 00:27:36,883] INFO Session: 0x10002b862e50000 closed (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:36,883] INFO EventThread shut down for session: 0x10002b862e50000 (org.apache.zookeeper.ClientCnxn)
+kafka      | Using log4j config /etc/kafka/log4j.properties
+kafka      | ===> Launching ... 
+zookeeper  | [2025-10-28 00:27:36,142] INFO zookeeper.enableEagerACLCheck = false (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO zookeeper.digest.enabled = true (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,142] INFO zookeeper.closeSessionTxn.enabled = true (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,143] INFO zookeeper.flushDelay = 0 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,143] INFO zookeeper.maxWriteQueuePollTime = 0 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,143] INFO zookeeper.maxBatchSize=1000 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,143] INFO zookeeper.intBufferStartingSizeBytes = 1024 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,144] INFO Weighed connection throttling is disabled (org.apache.zookeeper.server.BlueThrottle)
+zookeeper  | [2025-10-28 00:27:36,145] INFO minSessionTimeout set to 4000 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,145] INFO maxSessionTimeout set to 40000 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,146] INFO getData response cache size is initialized with value 400. (org.apache.zookeeper.server.ResponseCache)
+zookeeper  | [2025-10-28 00:27:36,146] INFO getChildren response cache size is initialized with value 400. (org.apache.zookeeper.server.ResponseCache)
+zookeeper  | [2025-10-28 00:27:36,147] INFO zookeeper.pathStats.slotCapacity = 60 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,148] INFO zookeeper.pathStats.slotDuration = 15 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,148] INFO zookeeper.pathStats.maxDepth = 6 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,148] INFO zookeeper.pathStats.initialDelay = 5 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,148] INFO zookeeper.pathStats.delay = 5 (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,148] INFO zookeeper.pathStats.enabled = false (org.apache.zookeeper.server.util.RequestPathMetricsCollector)
+zookeeper  | [2025-10-28 00:27:36,151] INFO The max bytes for all large requests are set to 104857600 (org.apache.zookeeper.server.ZooKeeperServer)
+kafka      | ===> Launching kafka ... 
+kafka      | [2025-10-28 00:27:37,686] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+kafka      | [2025-10-28 00:27:38,057] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+kafka      | [2025-10-28 00:27:38,162] INFO Registered signal handlers for TERM, INT, HUP (org.apache.kafka.common.utils.LoggingSignalHandler)
+kafka      | [2025-10-28 00:27:38,164] INFO starting (kafka.server.KafkaServer)
+zookeeper  | [2025-10-28 00:27:36,151] INFO The large request threshold is set to -1 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,152] INFO zookeeper.enforce.auth.enabled = false (org.apache.zookeeper.server.AuthenticationHelper)
+zookeeper  | [2025-10-28 00:27:36,152] INFO zookeeper.enforce.auth.schemes = [] (org.apache.zookeeper.server.AuthenticationHelper)
+kafka      | [2025-10-28 00:27:38,165] INFO Connecting to zookeeper on zookeeper:2181 (kafka.server.KafkaServer)
+kafka      | [2025-10-28 00:27:38,185] INFO [ZooKeeperClient Kafka server] Initializing a new session to zookeeper:2181. (kafka.zookeeper.ZooKeeperClient)
+kafka      | [2025-10-28 00:27:38,190] INFO Client environment:zookeeper.version=3.8.3-6ad6d364c7c0bcf0de452d54ebefa3058098ab56, built on 2023-10-05 10:34 UTC (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,190] INFO Client environment:host.name=1a4a8870d8cc (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.version=11.0.21 (org.apache.zookeeper.ZooKeeper)
+zookeeper  | [2025-10-28 00:27:36,152] INFO Created server with tickTime 2000 ms minSessionTimeout 4000 ms maxSessionTimeout 40000 ms clientPortListenBacklog -1 datadir /var/lib/zookeeper/log/version-2 snapdir /var/lib/zookeeper/data/version-2 (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper  | [2025-10-28 00:27:36,185] INFO Logging initialized @1032ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.class.path=/usr/bin/../share/java/kafka/jetty-server-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jopt-simple-5.0.4.jar:/usr/bin/../share/java/kafka/trogdor-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/audience-annotations-0.12.0.jar:/usr/bin/../share/java/kafka/javax.activation-api-1.2.0.jar:/usr/bin/../share/java/kafka/commons-lang3-3.8.1.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-core-2.39.1.jar:/usr/bin/../share/java/kafka/slf4j-api-1.7.36.jar:/usr/bin/../share/java/kafka/connect-transforms-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-streams-scala_2.13-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/snappy-java-1.1.10.5.jar:/usr/bin/../share/java/kafka/jetty-io-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jakarta.validation-api-2.0.2.jar:/usr/bin/../share/java/kafka/jersey-server-2.39.1.jar:/usr/bin/../share/java/kafka/scala-reflect-2.13.11.jar:/usr/bin/../share/java/kafka/jackson-module-scala_2.13-2.13.5.jar:/usr/bin/../share/java/kafka/caffeine-2.9.3.jar:/usr/bin/../share/java/kafka/paranamer-2.8.jar:/usr/bin/../share/java/kafka/netty-codec-4.1.100.Final.jar:/usr/bin/../share/java/kafka/metrics-core-4.1.12.1.jar:/usr/bin/../share/java/kafka/kafka-server-common-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-group-coordinator-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/netty-transport-native-epoll-4.1.100.Final.jar:/usr/bin/../share/java/kafka/scala-logging_2.13-3.9.4.jar:/usr/bin/../share/java/kafka/jersey-client-2.39.1.jar:/usr/bin/../share/java/kafka/kafka-log4j-appender-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-raft-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-basic-auth-extension-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/javax.ws.rs-api-2.1.1.jar:/usr/bin/../share/java/kafka/connect-mirror-client-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/plexus-utils-3.3.1.jar:/usr/bin/../share/java/kafka/javassist-3.29.2-GA.jar:/usr/bin/../share/java/kafka/commons-validator-1.7.jar:/usr/bin/../share/java/kafka/jetty-continuation-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/netty-buffer-4.1.100.Final.jar:/usr/bin/../share/java/kafka/scala-library-2.13.11.jar:/usr/bin/../share/java/kafka/commons-beanutils-1.9.4.jar:/usr/bin/../share/java/kafka/kafka-tools-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/hk2-api-2.6.1.jar:/usr/bin/../share/java/kafka/javax.servlet-api-3.1.0.jar:/usr/bin/../share/java/kafka/commons-digester-2.1.jar:/usr/bin/../share/java/kafka/jose4j-0.9.3.jar:/usr/bin/../share/java/kafka/netty-transport-classes-epoll-4.1.100.Final.jar:/usr/bin/../share/java/kafka/netty-common-4.1.100.Final.jar:/usr/bin/../share/java/kafka/jakarta.xml.bind-api-2.3.3.jar:/usr/bin/../share/java/kafka/netty-transport-4.1.100.Final.jar:/usr/bin/../share/java/kafka/jetty-http-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jersey-common-2.39.1.jar:/usr/bin/../share/java/kafka/jaxb-api-2.3.1.jar:/usr/bin/../share/java/kafka/commons-cli-1.4.jar:/usr/bin/../share/java/kafka/zookeeper-jute-3.8.3.jar:/usr/bin/../share/java/kafka/reload4j-1.2.25.jar:/usr/bin/../share/java/kafka/kafka-clients-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.ws.rs-api-2.1.6.jar:/usr/bin/../share/java/kafka/hk2-locator-2.6.1.jar:/usr/bin/../share/java/kafka/aopalliance-repackaged-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-streams-examples-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-runtime-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/maven-artifact-3.8.8.jar:/usr/bin/../share/java/kafka/rocksdbjni-7.9.2.jar:/usr/bin/../share/java/kafka/argparse4j-0.7.0.jar:/usr/bin/../share/java/kafka/jetty-security-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/zstd-jni-1.5.5-1.jar:/usr/bin/../share/java/kafka/jersey-container-servlet-2.39.1.jar:/usr/bin/../share/java/kafka/jetty-client-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-json-provider-2.13.5.jar:/usr/bin/../share/java/kafka/connect-json-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-databind-2.13.5.jar:/usr/bin/../share/java/kafka/kafka_2.13-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/kafka-storage-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/commons-io-2.11.0.jar:/usr/bin/../share/java/kafka/kafka-tools-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/netty-resolver-4.1.100.Final.jar:/usr/bin/../share/java/kafka/reflections-0.10.2.jar:/usr/bin/../share/java/kafka/netty-handler-4.1.100.Final.jar:/usr/bin/../share/java/kafka/kafka-storage-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.activation-api-1.2.2.jar:/usr/bin/../share/java/kafka/jackson-jaxrs-base-2.13.5.jar:/usr/bin/../share/java/kafka/jsr305-3.0.2.jar:/usr/bin/../share/java/kafka/jetty-util-ajax-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/commons-logging-1.2.jar:/usr/bin/../share/java/kafka/netty-transport-native-unix-common-4.1.100.Final.jar:/usr/bin/../share/java/kafka/kafka.jar:/usr/bin/../share/java/kafka/osgi-resource-locator-1.0.3.jar:/usr/bin/../share/java/kafka/swagger-annotations-2.2.8.jar:/usr/bin/../share/java/kafka/jetty-util-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jackson-core-2.13.5.jar:/usr/bin/../share/java/kafka/hk2-utils-2.6.1.jar:/usr/bin/../share/java/kafka/kafka-metadata-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jackson-module-jaxb-annotations-2.13.5.jar:/usr/bin/../share/java/kafka/kafka-streams-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/error_prone_annotations-2.10.0.jar:/usr/bin/../share/java/kafka/jersey-hk2-2.39.1.jar:/usr/bin/../share/java/kafka/lz4-java-1.8.0.jar:/usr/bin/../share/java/kafka/commons-collections-3.2.2.jar:/usr/bin/../share/java/kafka/kafka-shell-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/slf4j-reload4j-1.7.36.jar:/usr/bin/../share/java/kafka/checker-qual-3.19.0.jar:/usr/bin/../share/java/kafka/jline-3.22.0.jar:/usr/bin/../share/java/kafka/scala-collection-compat_2.13-2.10.0.jar:/usr/bin/../share/java/kafka/connect-api-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/connect-mirror-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/jakarta.inject-2.6.1.jar:/usr/bin/../share/java/kafka/jakarta.annotation-api-1.3.5.jar:/usr/bin/../share/java/kafka/javax.annotation-api-1.3.2.jar:/usr/bin/../share/java/kafka/activation-1.1.1.jar:/usr/bin/../share/java/kafka/jackson-datatype-jdk8-2.13.5.jar:/usr/bin/../share/java/kafka/zookeeper-3.8.3.jar:/usr/bin/../share/java/kafka/kafka-streams-test-utils-7.6.0-ccs.jar:/usr/bin/../share/java/kafka/scala-java8-compat_2.13-1.0.2.jar:/usr/bin/../share/java/kafka/jetty-servlets-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/jetty-servlet-9.4.53.v20231009.jar:/usr/bin/../share/java/kafka/metrics-core-2.2.0.jar:/usr/bin/../share/java/kafka/jackson-dataformat-csv-2.13.5.jar:/usr/bin/../share/java/kafka/pcollections-4.0.1.jar:/usr/bin/../share/java/confluent-telemetry/* (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+zookeeper  | [2025-10-28 00:27:36,439] WARN o.e.j.s.ServletContextHandler@13d73f29{/,null,STOPPED} contextPath ends with /* (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper  | [2025-10-28 00:27:36,439] WARN Empty contextPath (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper  | [2025-10-28 00:27:36,488] INFO jetty-9.4.53.v20231009; built: 2023-10-09T12:29:09.265Z; git: 27bde00a0b95a1d5bbee0eae7984f891d2d0f8c9; jvm 11.0.21+9-LTS (org.eclipse.jetty.server.Server)
+zookeeper  | [2025-10-28 00:27:36,544] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session)
+zookeeper  | [2025-10-28 00:27:36,544] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session)
+zookeeper  | [2025-10-28 00:27:36,546] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session)
+zookeeper  | [2025-10-28 00:27:36,550] WARN ServletContext@o.e.j.s.ServletContextHandler@13d73f29{/,null,STARTING} has uncovered http methods for path: /* (org.eclipse.jetty.security.SecurityHandler)
+zookeeper  | [2025-10-28 00:27:36,567] INFO Started o.e.j.s.ServletContextHandler@13d73f29{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper  | [2025-10-28 00:27:36,599] INFO Started ServerConnector@66982506{HTTP/1.1, (http/1.1)}{0.0.0.0:8080} (org.eclipse.jetty.server.AbstractConnector)
+zookeeper  | [2025-10-28 00:27:36,600] INFO Started @1447ms (org.eclipse.jetty.server.Server)
+zookeeper  | [2025-10-28 00:27:36,600] INFO Started AdminServer on address 0.0.0.0, port 8080 and command URL /commands (org.apache.zookeeper.server.admin.JettyAdminServer)
+zookeeper  | [2025-10-28 00:27:36,609] INFO Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory (org.apache.zookeeper.server.ServerCnxnFactory)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+kafka      | [2025-10-28 00:27:38,191] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:27:35,946] INFO AdminClientConfig values: 
+zookeeper  | [2025-10-28 00:27:36,611] WARN maxCnxns is not configured, using default value 0. (org.apache.zookeeper.server.ServerCnxnFactory)
+zookeeper        | [2025-10-28 00:27:36,616] INFO Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 12 worker threads, and 64 kB direct buffers. (org.apache.zookeeper.server.NIOServerCnxnFactory)
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+schema-registry  | 	metadata.max.age.ms = 300000
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:os.version=6.10.14-linuxkit (org.apache.zookeeper.ZooKeeper)
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:user.name=appuser (org.apache.zookeeper.ZooKeeper)
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:user.home=/home/appuser (org.apache.zookeeper.ZooKeeper)
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:user.dir=/home/appuser (org.apache.zookeeper.ZooKeeper)
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:os.memory.free=1007MB (org.apache.zookeeper.ZooKeeper)
+zookeeper        | [2025-10-28 00:27:36,619] INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+kafka            | [2025-10-28 00:27:38,191] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+zookeeper        | [2025-10-28 00:27:36,656] INFO Using org.apache.zookeeper.server.watch.WatchManager as watch manager (org.apache.zookeeper.server.watch.WatchManagerFactory)
+zookeeper        | [2025-10-28 00:27:36,656] INFO Using org.apache.zookeeper.server.watch.WatchManager as watch manager (org.apache.zookeeper.server.watch.WatchManagerFactory)
+zookeeper        | [2025-10-28 00:27:36,659] INFO zookeeper.snapshotSizeFactor = 0.33 (org.apache.zookeeper.server.ZKDatabase)
+zookeeper        | [2025-10-28 00:27:36,660] INFO zookeeper.commitLogCount=500 (org.apache.zookeeper.server.ZKDatabase)
+kafka            | [2025-10-28 00:27:38,194] INFO Initiating client connection, connectString=zookeeper:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@4372b9b6 (org.apache.zookeeper.ZooKeeper)
+kafka            | [2025-10-28 00:27:38,199] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+zookeeper        | [2025-10-28 00:27:36,669] INFO zookeeper.snapshot.compression.method = CHECKED (org.apache.zookeeper.server.persistence.SnapStream)
+zookeeper        | [2025-10-28 00:27:36,669] INFO Snapshotting: 0x0 to /var/lib/zookeeper/data/version-2/snapshot.0 (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper        | [2025-10-28 00:27:36,679] INFO Snapshot loaded in 19 ms, highest zxid is 0x0, digest is 1371985504 (org.apache.zookeeper.server.ZKDatabase)
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+kafka            | [2025-10-28 00:27:38,206] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+kafka            | [2025-10-28 00:27:38,209] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+kafka            | [2025-10-28 00:27:38,215] INFO Opening socket connection to server zookeeper/172.19.0.2:2181. (org.apache.zookeeper.ClientCnxn)
+kafka            | [2025-10-28 00:27:38,223] INFO Socket connection established, initiating session, client: /172.19.0.3:50414, server: zookeeper/172.19.0.2:2181 (org.apache.zookeeper.ClientCnxn)
+kafka            | [2025-10-28 00:27:38,234] INFO Session establishment complete on server zookeeper/172.19.0.2:2181, session id = 0x10002b862e50001, negotiated timeout = 18000 (org.apache.zookeeper.ClientCnxn)
+kafka            | [2025-10-28 00:27:38,239] INFO [ZooKeeperClient Kafka server] Connected. (kafka.zookeeper.ZooKeeperClient)
+kafka            | [2025-10-28 00:27:38,613] INFO Cluster ID = 3a4KL4jSTIukX2OAM_bvHg (kafka.server.KafkaServer)
+kafka            | [2025-10-28 00:27:38,620] WARN No meta.properties file under dir /var/lib/kafka/data/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+kafka            | [2025-10-28 00:27:38,744] INFO KafkaConfig values: 
+kafka            | 	advertised.listeners = INTERNAL://kafka:29092,HOST://localhost:9092
+kafka            | 	alter.config.policy.class.name = null
+kafka            | 	alter.log.dirs.replication.quota.window.num = 11
+kafka            | 	alter.log.dirs.replication.quota.window.size.seconds = 1
+kafka            | 	authorizer.class.name = 
+kafka            | 	auto.create.topics.enable = true
+kafka            | 	auto.include.jmx.reporter = true
+kafka            | 	auto.leader.rebalance.enable = true
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+kafka            | 	background.threads = 10
+kafka            | 	broker.heartbeat.interval.ms = 2000
+kafka            | 	broker.id = 1
+kafka            | 	broker.id.generation.enable = true
+kafka            | 	broker.rack = null
+kafka            | 	broker.session.timeout.ms = 9000
+kafka            | 	client.quota.callback.class = null
+kafka            | 	compression.type = producer
+kafka            | 	connection.failed.authentication.delay.ms = 100
+kafka            | 	connections.max.idle.ms = 600000
+kafka            | 	connections.max.reauth.ms = 0
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+kafka            | 	control.plane.listener.name = null
+kafka            | 	controlled.shutdown.enable = true
+kafka            | 	controlled.shutdown.max.retries = 3
+kafka            | 	controlled.shutdown.retry.backoff.ms = 5000
+kafka            | 	controller.listener.names = null
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+zookeeper        | [2025-10-28 00:27:36,682] INFO Snapshotting: 0x0 to /var/lib/zookeeper/data/version-2/snapshot.0 (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+zookeeper        | [2025-10-28 00:27:36,683] INFO Snapshot taken in 1 ms (org.apache.zookeeper.server.ZooKeeperServer)
+zookeeper        | [2025-10-28 00:27:36,701] INFO PrepRequestProcessor (sid:0) started, reconfigEnabled=false (org.apache.zookeeper.server.PrepRequestProcessor)
+zookeeper        | [2025-10-28 00:27:36,702] INFO zookeeper.request_throttler.shutdownTimeout = 10000 ms (org.apache.zookeeper.server.RequestThrottler)
+zookeeper        | [2025-10-28 00:27:36,734] INFO Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0 (org.apache.zookeeper.server.ContainerManager)
+zookeeper        | [2025-10-28 00:27:36,736] INFO ZooKeeper audit is disabled. (org.apache.zookeeper.audit.ZKAuditProvider)
+zookeeper        | [2025-10-28 00:27:36,749] INFO Creating new log file: log.1 (org.apache.zookeeper.server.persistence.FileTxnLog)
+kafka            | 	controller.quorum.append.linger.ms = 25
+kafka            | 	controller.quorum.election.backoff.max.ms = 1000
+kafka            | 	controller.quorum.election.timeout.ms = 1000
+kafka            | 	controller.quorum.fetch.timeout.ms = 2000
+kafka            | 	controller.quorum.request.timeout.ms = 2000
+kafka            | 	controller.quorum.retry.backoff.ms = 20
+kafka            | 	controller.quorum.voters = []
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+kafka            | 	controller.quota.window.num = 11
+kafka            | 	controller.quota.window.size.seconds = 1
+kafka            | 	controller.socket.timeout.ms = 30000
+kafka            | 	create.topic.policy.class.name = null
+kafka            | 	default.replication.factor = 1
+kafka            | 	delegation.token.expiry.check.interval.ms = 3600000
+kafka            | 	delegation.token.expiry.time.ms = 86400000
+kafka            | 	delegation.token.master.key = null
+kafka            | 	delegation.token.max.lifetime.ms = 604800000
+kafka            | 	delegation.token.secret.key = null
+kafka            | 	delete.records.purgatory.purge.interval.requests = 1
+kafka            | 	delete.topic.enable = true
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+kafka            | 	early.start.listeners = null
+kafka            | 	fetch.max.bytes = 57671680
+kafka            | 	fetch.purgatory.purge.interval.requests = 1000
+kafka            | 	group.consumer.assignors = [org.apache.kafka.coordinator.group.assignor.RangeAssignor]
+kafka            | 	group.consumer.heartbeat.interval.ms = 5000
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+kafka            | 	group.consumer.max.heartbeat.interval.ms = 15000
+kafka            | 	group.consumer.max.session.timeout.ms = 60000
+kafka            | 	group.consumer.max.size = 2147483647
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+kafka            | 	group.consumer.min.heartbeat.interval.ms = 5000
+kafka            | 	group.consumer.min.session.timeout.ms = 45000
+kafka            | 	group.consumer.session.timeout.ms = 45000
+kafka            | 	group.coordinator.new.enable = false
+kafka            | 	group.coordinator.threads = 1
+kafka            | 	group.initial.rebalance.delay.ms = 3000
+kafka            | 	group.max.session.timeout.ms = 1800000
+kafka            | 	group.max.size = 2147483647
+kafka            | 	group.min.session.timeout.ms = 6000
+kafka            | 	initial.broker.registration.timeout.ms = 60000
+kafka            | 	inter.broker.listener.name = INTERNAL
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:27:36,427] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+kafka            | 	inter.broker.protocol.version = 3.6-IV2
+kafka            | 	kafka.metrics.polling.interval.secs = 10
+kafka            | 	kafka.metrics.reporters = []
+kafka            | 	leader.imbalance.check.interval.seconds = 300
+kafka            | 	leader.imbalance.per.broker.percentage = 10
+schema-registry  | [2025-10-28 00:27:36,427] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:36,427] INFO Kafka startTimeMs: 1761611256424 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:36,496] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:36,505] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:36,612] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:36,613] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:36,816] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:36,816] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:37,120] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+kafka            | 	listener.security.protocol.map = INTERNAL:PLAINTEXT,HOST:PLAINTEXT
+kafka            | 	listeners = INTERNAL://0.0.0.0:29092,HOST://0.0.0.0:9092
+kafka            | 	log.cleaner.backoff.ms = 15000
+kafka            | 	log.cleaner.dedupe.buffer.size = 134217728
+kafka            | 	log.cleaner.delete.retention.ms = 86400000
+kafka            | 	log.cleaner.enable = true
+kafka            | 	log.cleaner.io.buffer.load.factor = 0.9
+kafka            | 	log.cleaner.io.buffer.size = 524288
+kafka            | 	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+kafka            | 	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+kafka            | 	log.cleaner.min.cleanable.ratio = 0.5
+kafka            | 	log.cleaner.min.compaction.lag.ms = 0
+schema-registry  | [2025-10-28 00:27:37,120] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:37,525] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:37,525] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:38,435] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:38,435] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:39,365] INFO [AdminClient clientId=adminclient-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | [2025-10-28 00:27:39,365] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (kafka/172.19.0.3:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:27:42,271] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+kafka            | 	log.cleaner.threads = 1
+kafka            | 	log.cleanup.policy = [delete]
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+kafka            | 	log.dir = /tmp/kafka-logs
+kafka            | 	log.dirs = /var/lib/kafka/data
+kafka            | 	log.flush.interval.messages = 9223372036854775807
+kafka            | 	log.flush.interval.ms = null
+kafka            | 	log.flush.offset.checkpoint.interval.ms = 60000
+kafka            | 	log.flush.scheduler.interval.ms = 9223372036854775807
+kafka            | 	log.flush.start.offset.checkpoint.interval.ms = 60000
+kafka            | 	log.index.interval.bytes = 4096
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+kafka            | 	log.index.size.max.bytes = 10485760
+kafka            | 	log.local.retention.bytes = -2
+kafka            | 	log.local.retention.ms = -2
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+kafka            | 	log.message.downconversion.enable = true
+kafka            | 	log.message.format.version = 3.0-IV1
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+kafka            | 	log.message.timestamp.after.max.ms = 9223372036854775807
+kafka            | 	log.message.timestamp.before.max.ms = 9223372036854775807
+kafka            | 	log.message.timestamp.difference.max.ms = 9223372036854775807
+kafka            | 	log.message.timestamp.type = CreateTime
+kafka            | 	log.preallocate = false
+kafka            | 	log.retention.bytes = -1
+kafka            | 	log.retention.check.interval.ms = 300000
+kafka            | 	log.retention.hours = 168
+kafka            | 	log.retention.minutes = null
+kafka            | 	log.retention.ms = null
+kafka            | 	log.roll.hours = 168
+kafka            | 	log.roll.jitter.hours = 0
+kafka            | 	log.roll.jitter.ms = null
+kafka            | 	log.roll.ms = null
+kafka            | 	log.segment.bytes = 1073741824
+kafka            | 	log.segment.delete.delay.ms = 60000
+kafka            | 	max.connection.creation.rate = 2147483647
+kafka            | 	max.connections = 2147483647
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+kafka            | 	max.connections.per.ip = 2147483647
+kafka            | 	max.connections.per.ip.overrides = 
+kafka            | 	max.incremental.fetch.session.cache.slots = 1000
+kafka            | 	message.max.bytes = 1048588
+kafka            | 	metadata.log.dir = null
+kafka            | 	metadata.log.max.record.bytes.between.snapshots = 20971520
+kafka            | 	metadata.log.max.snapshot.interval.ms = 3600000
+kafka            | 	metadata.log.segment.bytes = 1073741824
+kafka            | 	metadata.log.segment.min.bytes = 8388608
+kafka            | 	metadata.log.segment.ms = 604800000
+kafka            | 	metadata.max.idle.interval.ms = 500
+kafka            | 	metadata.max.retention.bytes = 104857600
+kafka            | 	metadata.max.retention.ms = 604800000
+kafka            | 	metric.reporters = []
+kafka            | 	metrics.num.samples = 2
+kafka            | 	metrics.recording.level = INFO
+kafka            | 	metrics.sample.window.ms = 30000
+kafka            | 	min.insync.replicas = 1
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+kafka            | 	node.id = 1
+kafka            | 	num.io.threads = 8
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+kafka            | 	num.network.threads = 3
+kafka            | 	num.partitions = 1
+kafka            | 	num.recovery.threads.per.data.dir = 1
+kafka            | 	num.replica.alter.log.dirs.threads = null
+kafka            | 	num.replica.fetchers = 1
+kafka            | 	offset.metadata.max.bytes = 4096
+kafka            | 	offsets.commit.required.acks = -1
+kafka            | 	offsets.commit.timeout.ms = 5000
+kafka            | 	offsets.load.buffer.size = 5242880
+kafka            | 	offsets.retention.check.interval.ms = 600000
+kafka            | 	offsets.retention.minutes = 10080
+kafka            | 	offsets.topic.compression.codec = 0
+kafka            | 	offsets.topic.num.partitions = 50
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+kafka            | 	offsets.topic.replication.factor = 1
+kafka            | 	offsets.topic.segment.bytes = 104857600
+kafka            | 	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+kafka            | 	password.encoder.iterations = 4096
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+kafka            | 	password.encoder.key.length = 128
+kafka            | 	password.encoder.keyfactory.algorithm = null
+kafka            | 	password.encoder.old.secret = null
+kafka            | 	password.encoder.secret = null
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+kafka            | 	principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+kafka            | 	process.roles = []
+kafka            | 	producer.id.expiration.check.interval.ms = 600000
+kafka            | 	producer.id.expiration.ms = 86400000
+kafka            | 	producer.purgatory.purge.interval.requests = 1000
+kafka            | 	queued.max.request.bytes = -1
+kafka            | 	queued.max.requests = 500
+kafka            | 	quota.window.num = 11
+kafka            | 	quota.window.size.seconds = 1
+kafka            | 	remote.log.index.file.cache.total.size.bytes = 1073741824
+kafka            | 	remote.log.manager.task.interval.ms = 30000
+kafka            | 	remote.log.manager.task.retry.backoff.max.ms = 30000
+kafka            | 	remote.log.manager.task.retry.backoff.ms = 500
+kafka            | 	remote.log.manager.task.retry.jitter = 0.2
+kafka            | 	remote.log.manager.thread.pool.size = 10
+kafka            | 	remote.log.metadata.custom.metadata.max.bytes = 128
+kafka            | 	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+kafka            | 	remote.log.metadata.manager.class.path = null
+kafka            | 	remote.log.metadata.manager.impl.prefix = rlmm.config.
+kafka            | 	remote.log.metadata.manager.listener.name = null
+kafka            | 	remote.log.reader.max.pending.tasks = 100
+kafka            | 	remote.log.reader.threads = 10
+kafka            | 	remote.log.storage.manager.class.name = null
+kafka            | 	remote.log.storage.manager.class.path = null
+kafka            | 	remote.log.storage.manager.impl.prefix = rsm.config.
+kafka            | 	remote.log.storage.system.enable = false
+kafka            | 	replica.fetch.backoff.ms = 1000
+kafka            | 	replica.fetch.max.bytes = 1048576
+kafka            | 	replica.fetch.min.bytes = 1
+kafka            | 	replica.fetch.response.max.bytes = 10485760
+kafka            | 	replica.fetch.wait.max.ms = 500
+kafka            | 	replica.high.watermark.checkpoint.interval.ms = 5000
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+kafka            | 	replica.lag.time.max.ms = 30000
+kafka            | 	replica.selector.class = null
+kafka            | 	replica.socket.receive.buffer.bytes = 65536
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+kafka            | 	replica.socket.timeout.ms = 30000
+kafka            | 	replication.quota.window.num = 11
+kafka            | 	replication.quota.window.size.seconds = 1
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+kafka            | 	request.timeout.ms = 30000
+kafka            | 	reserved.broker.max.id = 1000
+kafka            | 	sasl.client.callback.handler.class = null
+kafka            | 	sasl.enabled.mechanisms = [GSSAPI]
+kafka            | 	sasl.jaas.config = null
+kafka            | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+kafka            | 	sasl.kerberos.min.time.before.relogin = 60000
+kafka            | 	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+kafka            | 	sasl.kerberos.service.name = null
+kafka            | 	sasl.kerberos.ticket.renew.jitter = 0.05
+kafka            | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+kafka            | 	sasl.login.callback.handler.class = null
+kafka            | 	sasl.login.class = null
+kafka            | 	sasl.login.connect.timeout.ms = null
+kafka            | 	sasl.login.read.timeout.ms = null
+kafka            | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+kafka            | 	sasl.login.refresh.min.period.seconds = 60
+kafka            | 	sasl.login.refresh.window.factor = 0.8
+kafka            | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+kafka            | 	sasl.login.retry.backoff.max.ms = 10000
+kafka            | 	sasl.login.retry.backoff.ms = 100
+kafka            | 	sasl.mechanism.controller.protocol = GSSAPI
+kafka            | 	sasl.mechanism.inter.broker.protocol = GSSAPI
+kafka            | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+kafka            | 	sasl.oauthbearer.expected.audience = null
+kafka            | 	sasl.oauthbearer.expected.issuer = null
+kafka            | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+kafka            | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+kafka            | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+kafka            | 	sasl.oauthbearer.jwks.endpoint.url = null
+kafka            | 	sasl.oauthbearer.scope.claim.name = scope
+kafka            | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+kafka            | 	sasl.oauthbearer.token.endpoint.url = null
+kafka            | 	sasl.server.callback.handler.class = null
+kafka            | 	sasl.server.max.receive.size = 524288
+kafka            | 	security.inter.broker.protocol = PLAINTEXT
+kafka            | 	security.providers = null
+kafka            | 	server.max.startup.time.ms = 9223372036854775807
+kafka            | 	socket.connection.setup.timeout.max.ms = 30000
+kafka            | 	socket.connection.setup.timeout.ms = 10000
+kafka            | 	socket.listen.backlog.size = 50
+kafka            | 	socket.receive.buffer.bytes = 102400
+kafka            | 	socket.request.max.bytes = 104857600
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:42,382] INFO Logging initialized @859ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:27:42,433] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+kafka            | 	socket.send.buffer.bytes = 102400
+kafka            | 	ssl.cipher.suites = []
+kafka            | 	ssl.client.auth = none
+kafka            | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | [2025-10-28 00:27:42,682] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+kafka            | 	ssl.endpoint.identification.algorithm = https
+kafka            | 	ssl.engine.factory.class = null
+kafka            | 	ssl.key.password = null
+kafka            | 	ssl.keymanager.algorithm = SunX509
+kafka            | 	ssl.keystore.certificate.chain = null
+kafka            | 	ssl.keystore.key = null
+kafka            | 	ssl.keystore.location = null
+kafka            | 	ssl.keystore.password = null
+kafka            | 	ssl.keystore.type = JKS
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+kafka            | 	ssl.principal.mapping.rules = DEFAULT
+kafka            | 	ssl.protocol = TLSv1.3
+kafka            | 	ssl.provider = null
+kafka            | 	ssl.secure.random.implementation = null
+kafka            | 	ssl.trustmanager.algorithm = PKIX
+kafka            | 	ssl.truststore.certificates = null
+kafka            | 	ssl.truststore.location = null
+kafka            | 	ssl.truststore.password = null
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+kafka            | 	ssl.truststore.type = JKS
+kafka            | 	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+kafka            | 	transaction.max.timeout.ms = 900000
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+kafka            | 	transaction.partition.verification.enable = true
+kafka            | 	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+kafka            | 	transaction.state.log.load.buffer.size = 5242880
+kafka            | 	transaction.state.log.min.isr = 2
+kafka            | 	transaction.state.log.num.partitions = 50
+kafka            | 	transaction.state.log.replication.factor = 3
+kafka            | 	transaction.state.log.segment.bytes = 104857600
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+kafka            | 	transactional.id.expiration.ms = 604800000
+kafka            | 	unclean.leader.election.enable = false
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+kafka            | 	unstable.api.versions.enable = false
+kafka            | 	zookeeper.clientCnxnSocket = null
+kafka            | 	zookeeper.connect = zookeeper:2181
+kafka            | 	zookeeper.connection.timeout.ms = null
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+kafka            | 	zookeeper.max.in.flight.requests = 10
+kafka            | 	zookeeper.metadata.migration.enable = false
+kafka            | 	zookeeper.session.timeout.ms = 18000
+kafka            | 	zookeeper.set.acl = false
+kafka            | 	zookeeper.ssl.cipher.suites = null
+kafka            | 	zookeeper.ssl.client.enable = false
+kafka            | 	zookeeper.ssl.crl.enable = false
+kafka            | 	zookeeper.ssl.enabled.protocols = null
+kafka            | 	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+kafka            | 	zookeeper.ssl.keystore.location = null
+kafka            | 	zookeeper.ssl.keystore.password = null
+kafka            | 	zookeeper.ssl.keystore.type = null
+kafka            | 	zookeeper.ssl.ocsp.enable = false
+kafka            | 	zookeeper.ssl.protocol = TLSv1.2
+kafka            | 	zookeeper.ssl.truststore.location = null
+kafka            | 	zookeeper.ssl.truststore.password = null
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+kafka            | 	zookeeper.ssl.truststore.type = null
+kafka            |  (kafka.server.KafkaConfig)
+kafka            | [2025-10-28 00:27:38,797] INFO [ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+kafka            | [2025-10-28 00:27:38,799] INFO [ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+kafka            | [2025-10-28 00:27:38,801] INFO [ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+kafka            | [2025-10-28 00:27:38,805] INFO [ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+kafka            | [2025-10-28 00:27:38,842] INFO Loading logs from log dirs ArraySeq(/var/lib/kafka/data) (kafka.log.LogManager)
+kafka            | [2025-10-28 00:27:38,847] INFO No logs found to be loaded in /var/lib/kafka/data (kafka.log.LogManager)
+kafka            | [2025-10-28 00:27:38,857] INFO Loaded 0 logs in 14ms (kafka.log.LogManager)
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:27:42,683] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+kafka            | [2025-10-28 00:27:38,859] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+kafka            | [2025-10-28 00:27:38,861] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+kafka            | [2025-10-28 00:27:38,876] INFO Starting the log cleaner (kafka.log.LogCleaner)
+kafka            | [2025-10-28 00:27:38,909] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner$CleanerThread)
+kafka            | [2025-10-28 00:27:38,932] INFO [feature-zk-node-event-process-thread]: Starting (kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread)
+kafka            | [2025-10-28 00:27:38,945] INFO Feature ZK node at path: /feature does not exist (kafka.server.FinalizedFeatureChangeListener)
+kafka            | [2025-10-28 00:27:38,971] INFO [zk-broker-1-to-controller-forwarding-channel-manager]: Starting (kafka.server.BrokerToControllerRequestThread)
+kafka            | [2025-10-28 00:27:39,340] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+kafka            | [2025-10-28 00:27:39,362] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(INTERNAL) (kafka.network.SocketServer)
+kafka            | [2025-10-28 00:27:39,363] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+kafka            | [2025-10-28 00:27:39,370] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(HOST) (kafka.network.SocketServer)
+kafka            | [2025-10-28 00:27:39,376] INFO [zk-broker-1-to-controller-alter-partition-channel-manager]: Starting (kafka.server.BrokerToControllerRequestThread)
+schema-registry  | [2025-10-28 00:27:43,076] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:27:43,078] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+kafka            | [2025-10-28 00:27:39,408] INFO [ExpirationReaper-1-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,411] INFO [ExpirationReaper-1-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+schema-registry  | [2025-10-28 00:27:43,245] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:43,246] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+kafka            | [2025-10-28 00:27:39,413] INFO [ExpirationReaper-1-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,416] INFO [ExpirationReaper-1-ElectLeader]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,417] INFO [ExpirationReaper-1-RemoteFetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,436] INFO [LogDirFailureHandler]: Starting (kafka.server.ReplicaManager$LogDirFailureHandler)
+kafka            | [2025-10-28 00:27:39,437] INFO [AddPartitionsToTxnSenderThread-1]: Starting (kafka.server.AddPartitionsToTxnManager)
+kafka            | [2025-10-28 00:27:39,470] INFO Creating /brokers/ids/1 (is it secure? false) (kafka.zk.KafkaZkClient)
+kafka            | [2025-10-28 00:27:39,501] INFO Stat of the created znode at /brokers/ids/1 is: 27,27,1761611259487,1761611259487,1,0,0,72060584994340865,237,0,27
+kafka            |  (kafka.zk.KafkaZkClient)
+kafka            | [2025-10-28 00:27:39,502] INFO Registered broker 1 at path /brokers/ids/1 with addresses: INTERNAL://kafka:29092,HOST://localhost:9092, czxid (broker epoch): 27 (kafka.zk.KafkaZkClient)
+kafka            | [2025-10-28 00:27:39,559] INFO [ControllerEventThread controllerId=1] Starting (kafka.controller.ControllerEventManager$ControllerEventThread)
+kafka            | [2025-10-28 00:27:39,566] INFO [ExpirationReaper-1-topic]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,573] INFO [ExpirationReaper-1-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+kafka            | [2025-10-28 00:27:39,574] INFO [ExpirationReaper-1-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,576] INFO Successfully created /controller_epoch with initial epoch 0 (kafka.zk.KafkaZkClient)
+kafka            | [2025-10-28 00:27:39,586] INFO [Controller id=1] 1 successfully elected as the controller. Epoch incremented to 1 and epoch zk version is now 1 (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,590] INFO [GroupCoordinator 1]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+kafka            | [2025-10-28 00:27:39,590] INFO [Controller id=1] Creating FeatureZNode at path: /feature with contents: FeatureZNode(2,Enabled,Map()) (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,596] INFO Feature ZK node created at path: /feature (kafka.server.FinalizedFeatureChangeListener)
+kafka            | [2025-10-28 00:27:39,598] INFO [GroupCoordinator 1]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+kafka            | [2025-10-28 00:27:39,616] INFO [TransactionCoordinator id=1] Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+kafka            | [2025-10-28 00:27:39,621] INFO [TransactionCoordinator id=1] Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+kafka            | [2025-10-28 00:27:39,622] INFO [TxnMarkerSenderThread-1]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:27:48,348] INFO AdminClientConfig values: 
+kafka            | [2025-10-28 00:27:39,629] INFO [MetadataCache brokerId=1] Updated cache from existing None to latest Features(version=3.6-IV2, finalizedFeatures={}, finalizedFeaturesEpoch=0). (kafka.server.metadata.ZkMetadataCache)
+kafka            | [2025-10-28 00:27:39,629] INFO [Controller id=1] Registering handlers (kafka.controller.KafkaController)
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+kafka            | [2025-10-28 00:27:39,635] INFO [Controller id=1] Deleting log dir event notifications (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,641] INFO [Controller id=1] Deleting isr change notifications (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,645] INFO [Controller id=1] Initializing controller context (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,665] INFO [Controller id=1] Initialized broker epochs cache: HashMap(1 -> 27) (kafka.controller.KafkaController)
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+kafka            | [2025-10-28 00:27:39,665] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+kafka            | [2025-10-28 00:27:39,678] DEBUG [Controller id=1] Register BrokerModifications handler for Set(1) (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,695] INFO [/config/changes-event-process-thread]: Starting (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka            | [2025-10-28 00:27:39,698] DEBUG [Channel manager on controller 1]: Controller 1 trying to connect to broker 1 (kafka.controller.ControllerChannelManager)
+kafka            | [2025-10-28 00:27:39,720] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+kafka            | [2025-10-28 00:27:39,726] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.DataPlaneAcceptor)
+kafka            | [2025-10-28 00:27:39,728] INFO [RequestSendThread controllerId=1] Starting (kafka.controller.RequestSendThread)
+kafka            | [2025-10-28 00:27:39,729] INFO [Controller id=1] Currently active brokers in the cluster: Set(1) (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,730] INFO [Controller id=1] Currently shutting brokers in the cluster: HashSet() (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,732] INFO [Controller id=1] Current list of topics in the cluster: HashSet() (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,732] INFO [Controller id=1] Fetching topic deletions in progress (kafka.controller.KafkaController)
+schema-registry  | 	metadata.max.age.ms = 300000
+schema-registry  | 	metric.reporters = []
+kafka            | [2025-10-28 00:27:39,734] INFO Awaiting socket connections on 0.0.0.0:29092. (kafka.network.DataPlaneAcceptor)
+kafka            | [2025-10-28 00:27:39,738] INFO [Controller id=1] List of topics to be deleted:  (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,739] INFO [Controller id=1] List of topics ineligible for deletion:  (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,745] INFO [Controller id=1] Initializing topic deletion manager (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,746] INFO [Topic Deletion Manager 1] Initializing manager with initial deletions: Set(), initial ineligible deletions: HashSet() (kafka.controller.TopicDeletionManager)
+kafka            | [2025-10-28 00:27:39,748] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+kafka            | [2025-10-28 00:27:39,749] INFO Kafka commitId: 1991cb733c81d6791626f88253a042b2ec835ab8 (org.apache.kafka.common.utils.AppInfoParser)
+kafka            | [2025-10-28 00:27:39,749] INFO Kafka startTimeMs: 1761611259739 (org.apache.kafka.common.utils.AppInfoParser)
+kafka            | [2025-10-28 00:27:39,749] INFO [Controller id=1] Sending update metadata request (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,750] INFO [KafkaServer id=1] started (kafka.server.KafkaServer)
+kafka            | [2025-10-28 00:27:39,755] INFO [Controller id=1 epoch=1] Sending UpdateMetadata request to brokers HashSet(1) for 0 partitions (state.change.logger)
+kafka            | [2025-10-28 00:27:39,769] INFO [ReplicaStateMachine controllerId=1] Initializing replica state (kafka.controller.ZkReplicaStateMachine)
+kafka            | [2025-10-28 00:27:39,771] INFO [ReplicaStateMachine controllerId=1] Triggering online replica state changes (kafka.controller.ZkReplicaStateMachine)
+kafka            | [2025-10-28 00:27:39,780] INFO [ReplicaStateMachine controllerId=1] Triggering offline replica state changes (kafka.controller.ZkReplicaStateMachine)
+kafka            | [2025-10-28 00:27:39,780] DEBUG [ReplicaStateMachine controllerId=1] Started replica state machine with initial state -> HashMap() (kafka.controller.ZkReplicaStateMachine)
+kafka            | [2025-10-28 00:27:39,781] INFO [PartitionStateMachine controllerId=1] Initializing partition state (kafka.controller.ZkPartitionStateMachine)
+kafka            | [2025-10-28 00:27:39,788] INFO [PartitionStateMachine controllerId=1] Triggering online partition state changes (kafka.controller.ZkPartitionStateMachine)
+kafka            | [2025-10-28 00:27:39,791] INFO [RequestSendThread controllerId=1] Controller 1 connected to kafka:29092 (id: 1 rack: null) for sending state change requests (kafka.controller.RequestSendThread)
+kafka            | [2025-10-28 00:27:39,798] DEBUG [PartitionStateMachine controllerId=1] Started partition state machine with initial state -> HashMap() (kafka.controller.ZkPartitionStateMachine)
+kafka            | [2025-10-28 00:27:39,801] INFO [Controller id=1] Ready to serve as the new controller with epoch 1 (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,828] INFO [Controller id=1] Partitions undergoing preferred replica election:  (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,829] INFO [Controller id=1] Partitions that completed preferred replica election:  (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,829] INFO [Controller id=1] Skipping preferred replica election for partitions due to topic deletion:  (kafka.controller.KafkaController)
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+kafka            | [2025-10-28 00:27:39,830] INFO [Controller id=1] Resuming preferred replica election for partitions:  (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,831] INFO [Controller id=1] Starting replica leader election (PREFERRED) for partitions  triggered by ZkTriggered (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,863] INFO [Controller id=1] Starting the controller scheduler (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:39,891] INFO [zk-broker-1-to-controller-alter-partition-channel-manager]: Recorded new controller, from now on will use node kafka:29092 (id: 1 rack: null) (kafka.server.BrokerToControllerRequestThread)
+kafka            | [2025-10-28 00:27:39,893] TRACE [Controller id=1 epoch=1] Received response UpdateMetadataResponseData(errorCode=0) for request UPDATE_METADATA with correlation id 0 sent to broker kafka:29092 (id: 1 rack: null) (state.change.logger)
+kafka            | [2025-10-28 00:27:39,894] INFO [zk-broker-1-to-controller-forwarding-channel-manager]: Recorded new controller, from now on will use node kafka:29092 (id: 1 rack: null) (kafka.server.BrokerToControllerRequestThread)
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+kafka            | [2025-10-28 00:27:44,865] INFO [Controller id=1] Processing automatic preferred replica leader election (kafka.controller.KafkaController)
+kafka            | [2025-10-28 00:27:44,866] TRACE [Controller id=1] Checking need to trigger auto leader balancing (kafka.controller.KafkaController)
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:27:48,512] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:48,512] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:48,512] INFO Kafka startTimeMs: 1761611268510 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:27:49,898] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:49,991] INFO Logging initialized @717ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:27:50,040] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:27:50,205] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:27:50,205] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:27:50,480] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:27:50,480] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:27:50,575] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:50,576] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:27:54,587] INFO AdminClientConfig values: 
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+schema-registry  | 	metadata.max.age.ms = 300000
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:27:54,750] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:54,750] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:27:54,750] INFO Kafka startTimeMs: 1761611274748 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:27:56,096] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:56,177] INFO Logging initialized @682ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:27:56,218] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:27:56,388] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:27:56,388] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:27:56,651] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:27:56,652] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:27:56,742] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:27:56,742] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:28:00,910] INFO AdminClientConfig values: 
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+schema-registry  | 	metadata.max.age.ms = 300000
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:28:01,070] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:28:01,070] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:28:01,070] INFO Kafka startTimeMs: 1761611281067 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:28:02,404] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:28:02,490] INFO Logging initialized @669ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:28:02,525] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:28:02,688] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:28:02,689] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:28:02,940] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:28:02,941] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:28:03,037] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:28:03,037] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...
+schema-registry  | ===> Running preflight checks ... 
+schema-registry  | ===> Check if Kafka is healthy ...
+schema-registry  | [2025-10-28 00:28:07,603] INFO AdminClientConfig values: 
+schema-registry  | 	auto.include.jmx.reporter = true
+schema-registry  | 	bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	client.dns.lookup = use_all_dns_ips
+schema-registry  | 	client.id = 
+schema-registry  | 	connections.max.idle.ms = 300000
+schema-registry  | 	default.api.timeout.ms = 60000
+schema-registry  | 	metadata.max.age.ms = 300000
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.recording.level = INFO
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	receive.buffer.bytes = 65536
+schema-registry  | 	reconnect.backoff.max.ms = 1000
+schema-registry  | 	reconnect.backoff.ms = 50
+schema-registry  | 	request.timeout.ms = 30000
+schema-registry  | 	retries = 2147483647
+schema-registry  | 	retry.backoff.ms = 100
+schema-registry  | 	sasl.client.callback.handler.class = null
+schema-registry  | 	sasl.jaas.config = null
+schema-registry  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	sasl.kerberos.service.name = null
+schema-registry  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	sasl.login.callback.handler.class = null
+schema-registry  | 	sasl.login.class = null
+schema-registry  | 	sasl.login.connect.timeout.ms = null
+schema-registry  | 	sasl.login.read.timeout.ms = null
+schema-registry  | 	sasl.login.refresh.buffer.seconds = 300
+schema-registry  | 	sasl.login.refresh.min.period.seconds = 60
+schema-registry  | 	sasl.login.refresh.window.factor = 0.8
+schema-registry  | 	sasl.login.refresh.window.jitter = 0.05
+schema-registry  | 	sasl.login.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.login.retry.backoff.ms = 100
+schema-registry  | 	sasl.mechanism = GSSAPI
+schema-registry  | 	sasl.oauthbearer.clock.skew.seconds = 30
+schema-registry  | 	sasl.oauthbearer.expected.audience = null
+schema-registry  | 	sasl.oauthbearer.expected.issuer = null
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+schema-registry  | 	sasl.oauthbearer.jwks.endpoint.url = null
+schema-registry  | 	sasl.oauthbearer.scope.claim.name = scope
+schema-registry  | 	sasl.oauthbearer.sub.claim.name = sub
+schema-registry  | 	sasl.oauthbearer.token.endpoint.url = null
+schema-registry  | 	security.protocol = PLAINTEXT
+schema-registry  | 	security.providers = null
+schema-registry  | 	send.buffer.bytes = 131072
+schema-registry  | 	socket.connection.setup.timeout.max.ms = 30000
+schema-registry  | 	socket.connection.setup.timeout.ms = 10000
+schema-registry  | 	ssl.cipher.suites = null
+schema-registry  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+schema-registry  | 	ssl.endpoint.identification.algorithm = https
+schema-registry  | 	ssl.engine.factory.class = null
+schema-registry  | 	ssl.key.password = null
+schema-registry  | 	ssl.keymanager.algorithm = SunX509
+schema-registry  | 	ssl.keystore.certificate.chain = null
+schema-registry  | 	ssl.keystore.key = null
+schema-registry  | 	ssl.keystore.location = null
+schema-registry  | 	ssl.keystore.password = null
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.protocol = TLSv1.3
+schema-registry  | 	ssl.provider = null
+schema-registry  | 	ssl.secure.random.implementation = null
+schema-registry  | 	ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	ssl.truststore.certificates = null
+schema-registry  | 	ssl.truststore.location = null
+schema-registry  | 	ssl.truststore.password = null
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  |  (org.apache.kafka.clients.admin.AdminClientConfig)
+schema-registry  | [2025-10-28 00:28:07,766] INFO Kafka version: 7.6.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:28:07,766] INFO Kafka commitId: 1991cb733c81d679 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | [2025-10-28 00:28:07,766] INFO Kafka startTimeMs: 1761611287764 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry  | Using log4j config /etc/schema-registry/log4j.properties
+schema-registry  | ===> Launching ... 
+schema-registry  | ===> Launching schema-registry ... 
+schema-registry  | [2025-10-28 00:28:09,152] INFO SchemaRegistryConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	avro.compatibility.level = 
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	enable.fips = false
+schema-registry  | 	host.name = schema-registry
+schema-registry  | 	host.port = 8081
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	init.resource.extension.class = []
+schema-registry  | 	inter.instance.headers.whitelist = []
+schema-registry  | 	inter.instance.listener.name = 
+schema-registry  | 	inter.instance.protocol = http
+schema-registry  | 	kafkagroup.heartbeat.interval.ms = 3000
+schema-registry  | 	kafkagroup.rebalance.timeout.ms = 300000
+schema-registry  | 	kafkagroup.session.timeout.ms = 10000
+schema-registry  | 	kafkastore.bootstrap.servers = [INTERNAL://kafka:29092]
+schema-registry  | 	kafkastore.checkpoint.dir = /tmp
+schema-registry  | 	kafkastore.checkpoint.version = 0
+schema-registry  | 	kafkastore.connection.url = 
+schema-registry  | 	kafkastore.group.id = 
+schema-registry  | 	kafkastore.init.timeout.ms = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+schema-registry  | 	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+schema-registry  | 	kafkastore.sasl.kerberos.service.name = 
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+schema-registry  | 	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+schema-registry  | 	kafkastore.sasl.mechanism = GSSAPI
+schema-registry  | 	kafkastore.security.protocol = PLAINTEXT
+schema-registry  | 	kafkastore.ssl.cipher.suites = 
+schema-registry  | 	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+schema-registry  | 	kafkastore.ssl.endpoint.identification.algorithm = 
+schema-registry  | 	kafkastore.ssl.key.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keymanager.algorithm = SunX509
+schema-registry  | 	kafkastore.ssl.keystore.location = 
+schema-registry  | 	kafkastore.ssl.keystore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.keystore.type = JKS
+schema-registry  | 	kafkastore.ssl.protocol = TLS
+schema-registry  | 	kafkastore.ssl.provider = 
+schema-registry  | 	kafkastore.ssl.trustmanager.algorithm = PKIX
+schema-registry  | 	kafkastore.ssl.truststore.location = 
+schema-registry  | 	kafkastore.ssl.truststore.password = [hidden]
+schema-registry  | 	kafkastore.ssl.truststore.type = JKS
+schema-registry  | 	kafkastore.timeout.ms = 500
+schema-registry  | 	kafkastore.topic = _schemas
+schema-registry  | 	kafkastore.topic.replication.factor = 3
+schema-registry  | 	kafkastore.topic.skip.validation = false
+schema-registry  | 	kafkastore.update.handlers = []
+schema-registry  | 	kafkastore.write.max.retries = 5
+schema-registry  | 	leader.connect.timeout.ms = 60000
+schema-registry  | 	leader.election.delay = false
+schema-registry  | 	leader.election.sticky = false
+schema-registry  | 	leader.eligibility = true
+schema-registry  | 	leader.read.timeout.ms = 60000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = [http://0.0.0.0:8081]
+schema-registry  | 	master.eligibility = null
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metadata.encoder.old.secret = null
+schema-registry  | 	metadata.encoder.secret = null
+schema-registry  | 	metadata.encoder.topic = _schema_encoders
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = kafka.schema.registry
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	mode.mutability = true
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8081
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.class = []
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	resource.static.locations = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/vnd.schemaregistry.v1+json
+schema-registry  | 	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	schema.cache.expiry.secs = 300
+schema-registry  | 	schema.cache.size = 1000
+schema-registry  | 	schema.canonicalize.on.consume = []
+schema-registry  | 	schema.compatibility.level = backward
+schema-registry  | 	schema.providers = []
+schema-registry  | 	schema.registry.group.id = schema-registry
+schema-registry  | 	schema.registry.inter.instance.protocol = 
+schema-registry  | 	schema.registry.resource.extension.class = []
+schema-registry  | 	schema.search.default.limit = 1000
+schema-registry  | 	schema.search.max.limit = 1000
+schema-registry  | 	schema.validate.fields = false
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:28:09,221] INFO Logging initialized @687ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry  | [2025-10-28 00:28:09,251] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:28:09,395] INFO RestConfig values: 
+schema-registry  | 	access.control.allow.headers = 
+schema-registry  | 	access.control.allow.methods = 
+schema-registry  | 	access.control.allow.origin = 
+schema-registry  | 	access.control.skip.options = true
+schema-registry  | 	authentication.method = NONE
+schema-registry  | 	authentication.realm = 
+schema-registry  | 	authentication.roles = [*]
+schema-registry  | 	authentication.skip.paths = []
+schema-registry  | 	compression.enable = true
+schema-registry  | 	connector.connection.limit = 0
+schema-registry  | 	csrf.prevention.enable = false
+schema-registry  | 	csrf.prevention.token.endpoint = /csrf
+schema-registry  | 	csrf.prevention.token.expiration.minutes = 30
+schema-registry  | 	csrf.prevention.token.max.entries = 10000
+schema-registry  | 	debug = false
+schema-registry  | 	dos.filter.delay.ms = 100
+schema-registry  | 	dos.filter.enabled = false
+schema-registry  | 	dos.filter.insert.headers = true
+schema-registry  | 	dos.filter.ip.whitelist = []
+schema-registry  | 	dos.filter.managed.attr = false
+schema-registry  | 	dos.filter.max.idle.tracker.ms = 30000
+schema-registry  | 	dos.filter.max.requests.ms = 30000
+schema-registry  | 	dos.filter.max.requests.per.connection.per.sec = 25
+schema-registry  | 	dos.filter.max.requests.per.sec = 25
+schema-registry  | 	dos.filter.max.wait.ms = 50
+schema-registry  | 	dos.filter.throttle.ms = 30000
+schema-registry  | 	dos.filter.throttled.requests = 5
+schema-registry  | 	http2.enabled = true
+schema-registry  | 	idle.timeout.ms = 30000
+schema-registry  | 	listener.protocol.map = []
+schema-registry  | 	listeners = []
+schema-registry  | 	max.request.header.size = 8192
+schema-registry  | 	max.response.header.size = 8192
+schema-registry  | 	metric.reporters = []
+schema-registry  | 	metrics.global.stats.request.tags.enable = false
+schema-registry  | 	metrics.jmx.prefix = rest-utils
+schema-registry  | 	metrics.latency.sla.ms = 50
+schema-registry  | 	metrics.latency.slo.ms = 5
+schema-registry  | 	metrics.latency.slo.sla.enable = false
+schema-registry  | 	metrics.num.samples = 2
+schema-registry  | 	metrics.sample.window.ms = 30000
+schema-registry  | 	metrics.tag.map = []
+schema-registry  | 	network.traffic.rate.limit.backend = guava
+schema-registry  | 	network.traffic.rate.limit.bytes.per.sec = 20971520
+schema-registry  | 	network.traffic.rate.limit.enable = false
+schema-registry  | 	nosniff.prevention.enable = false
+schema-registry  | 	port = 8080
+schema-registry  | 	proxy.protocol.enabled = false
+schema-registry  | 	reject.options.request = false
+schema-registry  | 	request.logger.name = io.confluent.rest-utils.requests
+schema-registry  | 	request.queue.capacity = 2147483647
+schema-registry  | 	request.queue.capacity.growby = 64
+schema-registry  | 	request.queue.capacity.init = 128
+schema-registry  | 	resource.extension.classes = []
+schema-registry  | 	response.http.headers.config = 
+schema-registry  | 	response.mediatype.default = application/json
+schema-registry  | 	response.mediatype.preferred = [application/json]
+schema-registry  | 	rest.servlet.initializor.classes = []
+schema-registry  | 	server.connection.limit = 0
+schema-registry  | 	shutdown.graceful.ms = 1000
+schema-registry  | 	sni.check.enabled = false
+schema-registry  | 	ssl.cipher.suites = []
+schema-registry  | 	ssl.client.auth = false
+schema-registry  | 	ssl.client.authentication = NONE
+schema-registry  | 	ssl.enabled.protocols = []
+schema-registry  | 	ssl.endpoint.identification.algorithm = null
+schema-registry  | 	ssl.key.password = [hidden]
+schema-registry  | 	ssl.keymanager.algorithm = 
+schema-registry  | 	ssl.keystore.location = 
+schema-registry  | 	ssl.keystore.password = [hidden]
+schema-registry  | 	ssl.keystore.reload = false
+schema-registry  | 	ssl.keystore.type = JKS
+schema-registry  | 	ssl.keystore.watch.location = 
+schema-registry  | 	ssl.protocol = TLS
+schema-registry  | 	ssl.provider = 
+schema-registry  | 	ssl.trustmanager.algorithm = 
+schema-registry  | 	ssl.truststore.location = 
+schema-registry  | 	ssl.truststore.password = [hidden]
+schema-registry  | 	ssl.truststore.type = JKS
+schema-registry  | 	suppress.stack.trace.response = true
+schema-registry  | 	thread.pool.max = 200
+schema-registry  | 	thread.pool.min = 8
+schema-registry  | 	websocket.path.prefix = /ws
+schema-registry  | 	websocket.servlet.initializor.classes = []
+schema-registry  |  (io.confluent.rest.RestConfig)
+schema-registry  | [2025-10-28 00:28:09,395] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry  | [2025-10-28 00:28:09,647] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:28:09,648] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true,isLeader=false (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry  | [2025-10-28 00:28:09,731] WARN Ignoring Kafka broker endpoint INTERNAL://kafka:29092 that does not match the setting for kafkastore.security.protocol=PLAINTEXT (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+schema-registry  | [2025-10-28 00:28:09,732] ERROR Server died unexpectedly:  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry  | org.apache.kafka.common.config.ConfigException: No supported Kafka endpoints are configured. kafkastore.bootstrap.servers must have at least one endpoint matching kafkastore.security.protocol.
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.endpointsToBootstrapServers(SchemaRegistryConfig.java:844)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig.bootstrapBrokers(SchemaRegistryConfig.java:793)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.kafkaClusterId(KafkaSchemaRegistry.java:1974)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry.<init>(KafkaSchemaRegistry.java:209)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.initSchemaRegistry(SchemaRegistryRestApplication.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryRestApplication.configureBaseApplication(SchemaRegistryRestApplication.java:103)
+schema-registry  | 	at io.confluent.rest.Application.configureHandler(Application.java:324)
+schema-registry  | 	at io.confluent.rest.ApplicationServer.doStart(ApplicationServer.java:212)
+schema-registry  | 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+schema-registry  | 	at io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain.main(SchemaRegistryMain.java:44)
+schema-registry  | ===> User
+schema-registry  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry  | ===> Configuring ...

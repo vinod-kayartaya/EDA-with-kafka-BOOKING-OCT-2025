@@ -1,0 +1,10 @@
+POST http://localhost:1234/deposit
+Content-Type: application/json
+
+{
+  "transactionId": "TXN1001",
+  "accountNumber": "ACC2001",
+  "depositorName": "Vinod",
+  "amount": 5000.75,
+  "timestamp": 1698461412000
+}
