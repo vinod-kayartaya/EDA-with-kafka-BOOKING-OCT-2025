@@ -160,6 +160,7 @@ public class DepositController {
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final String topic;
 
+    // constructor based dependency injection
     public DepositController(
             KafkaTemplate<String, String> kafkaTemplate,
             @Value("${app.kafka.topic}") String topic) {
