@@ -1,0 +1,14 @@
+POST http://localhost:3000/api/deposits
+Content-Type: text/plain
+Accept: application/json
+
+amount=6000&currency=USD&method=cash-deposit
+
+###
+POST http://localhost:3000/api/deposits
+Content-Type: text/plain
+Accept: application/json
+
+amount=1000&currency=USD&method=cheque-deposit
+
+###

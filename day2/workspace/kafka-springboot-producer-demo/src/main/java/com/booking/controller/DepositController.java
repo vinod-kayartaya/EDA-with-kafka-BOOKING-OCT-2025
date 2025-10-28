@@ -27,9 +27,9 @@ public class DepositController {
         // if successful, send a message to the kafka server
 
         if(depositInfo.contains("cash-deposit")){
-            kafkaTemplate.send("cash-deposit", depositInfo);
+            kafkaTemplate.send("cash-deposits", depositInfo);
         } else if (depositInfo.contains("cheque-deposit")) {
-            kafkaTemplate.send("cheque-deposit", depositInfo);
+            kafkaTemplate.send("cheque-deposits", depositInfo);
         }
 
         Map<String, Object> resp = new HashMap<>();

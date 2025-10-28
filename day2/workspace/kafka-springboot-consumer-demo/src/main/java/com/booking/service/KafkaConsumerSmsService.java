@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaConsumerSmsService {
 
-    @KafkaListener(topics = {"cash-deposit", "cheque-deposit"}, groupId = "credit-tx")
+    @KafkaListener(topics = {"cash-deposits", "cheque-deposits"}, groupId = "credit-trx")
     public void sendSmsForDepositEvents(ConsumerRecord<String, String> record){
 
         System.out.println("================= new kafka message received =================");
@@ -15,6 +15,7 @@ public class KafkaConsumerSmsService {
         System.out.println("Partition = " + record.partition());
         System.out.println("Key = " + record.key());
         System.out.println("Value = " + record.value());
+        System.out.println("Offset = " + record.offset());
         System.out.println("--------------------------------------------------------------");
     }
 }
