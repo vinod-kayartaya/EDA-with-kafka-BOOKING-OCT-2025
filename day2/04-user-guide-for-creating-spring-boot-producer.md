@@ -4,7 +4,7 @@ If you want a minimal, production-ready Kafka producer in Spring Boot, follow th
 
 ## 1) Generate the project on start.spring.io
 
-1. Go to start.spring.io.
+1. Go to https://start.spring.io
 2. Project: Maven.
 3. Language: Java.
 4. Spring Boot: 3.5.x.
