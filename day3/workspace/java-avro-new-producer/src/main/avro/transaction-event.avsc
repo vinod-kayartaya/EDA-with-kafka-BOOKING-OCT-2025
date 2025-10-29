@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "TransactionEvent",
+  "namespace": "com.booking.bank",
+  "fields": [
+    { "name": "txId", "type": "int"},
+    { "name": "txType", "type":  "string"},
+    { "name": "amount", "type": "double"},
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

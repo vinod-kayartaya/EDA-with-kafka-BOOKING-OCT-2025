@@ -1,0 +1,22 @@
+POST /subjects/transactions-value/versions HTTP/1.1
+Host: localhost:8081
+Content-Type: application/vnd.schemaregistry.v1+json
+Accept: application/vnd.schemaregistry.v1+json
+
+{
+  "schema": "{\"type\":\"record\",\"name\":\"TransactionEvent\",\"namespace\":\"com.booking.bank\",\"fields\":[{\"name\":\"txId\",\"type\":\"int\"},{\"name\":\"txType\",\"type\":\"string\"},{\"name\":\"amount\",\"type\":\"double\"},{\"name\":\"charges\",\"type\":\"double\", \"default\":0.0},{\"name\":\"timestamp\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}, \"default\": 0}]}"
+}
+
+###
+
+
+GET /subjects/transactions-value/versions HTTP/1.1
+Host: localhost:8081
+Accept: application/vnd.schemaregistry.v1+json
+
+###
+GET /subjects/transactions-value/versions/3 HTTP/1.1
+Host: localhost:8081
+Accept: application/vnd.schemaregistry.v1+json
+
+###
