@@ -18,7 +18,9 @@ public class KafkaConsumerSmsService {
         System.out.println("Offset = " + record.offset());
         System.out.println("--------------------------------------------------------------");
 
-        if(record.value().contains("FAIL")){
+        // some business logic that might trigger an exception based
+        // on some scenario
+        if(record.value().toLowerCase().contains("fail")){
             throw new RuntimeException("Simulation of a consumer failure");
         }
     }
