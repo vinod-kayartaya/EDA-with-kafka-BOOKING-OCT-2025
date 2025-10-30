@@ -3,10 +3,7 @@ package com.booking.streams;
 import com.booking.model.Transaction;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
-import org.apache.kafka.streams.kstream.Consumed;
-import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.KTable;
-import org.apache.kafka.streams.kstream.Materialized;
+import org.apache.kafka.streams.kstream.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.support.serializer.JsonSerde;
@@ -29,7 +26,7 @@ public class IdentifyLargeTransactions {
 
         // TODO: another topic to get the running total of all transactions
         KTable<String, Double> runningTotal =
-                stream.groupByKey()
+                stream.groupByKey(Grouped.with(Serdes.String(), txnSerde))
                         .aggregate(() -> 0.0,
                                 (k, t, total) -> total + t.getAmount(),
                                 Materialized.with(Serdes.String(), Serdes.Double()));
