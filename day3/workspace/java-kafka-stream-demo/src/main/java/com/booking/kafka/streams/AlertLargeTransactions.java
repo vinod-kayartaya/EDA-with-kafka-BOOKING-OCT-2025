@@ -21,7 +21,9 @@ public class AlertLargeTransactions {
 
         // filter transactions with amount >= 50000
         KStream<String, String> largeTransactions =
-                transactions.filter((k, v) -> {
+                transactions.peek((k, v) -> {
+                            System.out.printf("transaction: key = %s, value = %s\n", k, v);
+                        }).filter((k, v) -> {
                             // value --> id=222;type=cash;amount=34000
                             var data = v.split(";");
                             var amountData = data[2].split("=");
@@ -29,7 +31,7 @@ public class AlertLargeTransactions {
                             return amount >= 50000;
                         })
                         .peek((k, v) -> {
-                            System.out.printf("key = %s, value = %s\n", k, v);
+                            System.out.printf("large transaction: key = %s, value = %s\n", k, v);
                         });
 
         largeTransactions.to(targetTopic);
