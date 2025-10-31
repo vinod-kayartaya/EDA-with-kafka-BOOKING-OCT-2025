@@ -6,3 +6,4 @@
 <br />Contact: **vinod@vinod.co**
 
 ![Kafka Architecture](./kafka-architecture.png)
+![Kafka Spring boot infrastructure](./kafka-springboot-infra.png)
