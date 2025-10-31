@@ -1,0 +1,55 @@
+#1 Create Topic: sales with 3 partitions and replication factor 1
+docker exec -it kafka kafka-topics --create \
+  --bootstrap-server localhost:9092 \
+  --topic sales \
+  --partitions 3 \
+  --replication-factor 1
+
+#2 Produce 100 Messages:
+docker exec -it kafka bash -c '
+for i in {1..100}; do
+  echo "{\"order_id\": \"ORD-$i\", \"amount\": $((RANDOM % 1000))}" | \
+  kafka-console-producer --bootstrap-server localhost:9092 --topic sales
+done
+'
+
+#3 Open Grafana NOW: http://localhost:3000
+# Go to "Kafka Consumer Lag Monitoring" dashboard
+
+#4 Start a slow consumer that reads messages with a delay
+docker exec -it kafka bash -c "
+kafka-console-consumer --bootstrap-server localhost:9092 \
+  --topic sales \
+  --group slow-sales-consumer-group \
+  --from-beginning | \
+  while read line; do
+    echo \"\$line\"
+    sleep 2
+  done
+"
+
+#5 In Another Terminal, produce more messages to the sales topic
+docker exec -it kafka bash -c '
+for i in {101..200}; do
+  echo "{\"order_id\": \"ORD-$i\", \"amount\": $((RANDOM % 1000))}\" | \
+  kafka-console-producer --bootstrap-server localhost:9092 --topic sales
+  sleep 0.5
+done
+'
+
+#6 Check Lag Status:
+docker exec -it kafka kafka-consumer-groups \
+  --bootstrap-server localhost:9092 \
+  --group slow-sales-consumer-group \
+  --describe
+
+#7 Continuous Live Demo: Produce messages continuously
+docker exec -it kafka bash -c '
+counter=300
+while true; do
+  echo "{\"order_id\": \"ORD-\$counter\", \"timestamp\": \""\$(date +%s)"\"}" | \
+  kafka-console-producer --bootstrap-server localhost:9092 --topic sales
+  counter=\$((counter + 1))
+  sleep 1
+done
+'
