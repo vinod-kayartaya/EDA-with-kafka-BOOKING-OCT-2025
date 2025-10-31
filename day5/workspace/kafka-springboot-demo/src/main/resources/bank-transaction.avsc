@@ -1,0 +1,11 @@
+{
+  "namespace": "com.booking.model.avro",
+  "type": "record",
+  "name": "BankTransaction",
+  "fields": [
+    {"name": "transactionId", "type": "string"},
+    {"name": "accountNumber", "type": "string"},
+    {"name": "amount", "type": "double"},
+    {"name": "transactionType", "type": "string"}
+  ]
+}
