@@ -1,0 +1,9 @@
+POST http://localhost:1234/api/transactions
+Content-Type: application/json
+
+{
+    "transactionId": "t00123",
+    "amount": 12300,
+    "accountNumber": "ac0001234",
+    "transactionType": "cash"
+}

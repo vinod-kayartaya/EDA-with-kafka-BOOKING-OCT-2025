@@ -135,6 +135,24 @@ services:
       # If using Confluent images with internal compatibility, set Kafka store topic replication factor to 1 for single-node
       SCHEMA_REGISTRY_KAFKASTORE_TOPIC_REPLICATION_FACTOR: 1
 
+  banking-app:
+    build:
+      context: ../kafka-springboot-demo/
+      dockerfile: Dockerfile
+    container_name: banking-app
+    depends_on:
+      - kafka
+      - schema-registry
+    ports:
+      - "1234:1234"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      KAFKA_BROKER_HOST: kafka
+      SCHEMA_REGISTRY_HOST: schema-registry
+    networks:
+      - kafka-network
+    restart: unless-stopped
+
 volumes:
   zookeeper-data:
   zookeeper-logs:
